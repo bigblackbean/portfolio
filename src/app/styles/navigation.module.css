@@ -1,0 +1,5 @@
+.navigation-item:hover {
+  width: 100px;
+  height: 100px;
+  transition: all 0.2s;
+}
