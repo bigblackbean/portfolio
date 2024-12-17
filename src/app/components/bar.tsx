@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FunctionComponent } from "react";
 
 const Bar: FunctionComponent = () => {
@@ -13,16 +14,18 @@ const Bar: FunctionComponent = () => {
         borderBottom: 0,
       }}
     >
-      <button
-        type="button"
-        style={{
-          width: 16,
-          height: 16,
-          border: "1px solid #D45648",
-          borderRadius: "50%",
-          backgroundColor: "#F26053",
-        }}
-      />
+      <Link href="/home">
+        <span
+          style={{
+            display: "block",
+            width: 16,
+            height: 16,
+            border: "1px solid #D45648",
+            borderRadius: "50%",
+            backgroundColor: "#F26053",
+          }}
+        />
+      </Link>
     </div>
   );
 };

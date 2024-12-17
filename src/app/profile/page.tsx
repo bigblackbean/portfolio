@@ -28,7 +28,16 @@ const skills = [
 
 const Profile: FunctionComponent = () => {
   return (
-    <div>
+    <div
+      style={{
+        width: "80%",
+        background: "#f2f2f2",
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
       <Bar />
       <div>
         <h3>Profile</h3>

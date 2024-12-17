@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Nav from "./components/nav";
+import Image from "next/image";
+import background from "@/app/images/blackwave.jpg";
 
 const suiteSans = localFont({
   src: "./fonts/SUITE-Variable.woff2",
@@ -20,7 +23,47 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${suiteSans} antialiased`}>{children}</body>
+      <body className={`${suiteSans} antialiased`}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+            height: "100vh",
+            background: "#000",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          >
+            <Image
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              src={background}
+              alt="background"
+            />
+            <main
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "fixed",
+                top: 0,
+                left: 0,
+                zIndex: 1,
+              }}
+            >
+              {children}
+            </main>
+            <Nav />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
