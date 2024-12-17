@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import Nav from "./components/nav";
 import Image from "next/image";
-import background from "@/app/images/blackwave.jpg";
+import localFont from "next/font/local";
+
+import "../styles/globals.css";
+import Nav from "../components/nav";
+import background from "@/images/blackwave.jpg";
 
 const suiteSans = localFont({
-  src: "./fonts/SUITE-Variable.woff2",
+  src: "../fonts/SUITE-Variable.woff2",
   // variable: "--font-geist-sans",
   weight: "100 900",
 });

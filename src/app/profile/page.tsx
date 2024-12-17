@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import Bar from "../components/bar";
+import Bar from "../../components/bar";
 
 const person = [
   "이강희",

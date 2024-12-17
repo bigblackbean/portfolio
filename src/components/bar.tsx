@@ -14,7 +14,7 @@ const Bar: FunctionComponent = () => {
         borderBottom: 0,
       }}
     >
-      <Link href="/home">
+      <Link href="/">
         <span
           style={{
             display: "block",
