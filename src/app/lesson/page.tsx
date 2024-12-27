@@ -1,7 +1,8 @@
-import { FunctionComponent } from "react";
+import PageTitle from "@/components/pageTitle";
 import Bar from "../../components/bar";
+import Accordion from "./components/accordion";
 
-const Service: FunctionComponent = () => {
+export default function Lesson() {
   return (
     <div
       style={{
@@ -15,9 +16,9 @@ const Service: FunctionComponent = () => {
     >
       <Bar />
       <div>
-        <h3>Service</h3>
+        <PageTitle name="Lesson" />
+        <Accordion />
       </div>
     </div>
   );
-};
-export default Service;
+}
