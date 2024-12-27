@@ -1,5 +1,7 @@
 import { FunctionComponent } from "react";
 import Bar from "../../components/bar";
+import PageTitle from "@/components/pageTitle";
+import Accordion from "./components/accordion";
 
 const History: FunctionComponent = () => {
   return (
@@ -15,7 +17,8 @@ const History: FunctionComponent = () => {
     >
       <Bar />
       <div>
-        <h3>History</h3>
+        <PageTitle name="History" />
+        <Accordion />
       </div>
     </div>
   );
