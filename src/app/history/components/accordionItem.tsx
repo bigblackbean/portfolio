@@ -26,11 +26,11 @@ export default function AccordionItem({
         <span
           style={{
             display: "block",
-            width: 16,
-            height: 16,
+            width: 14,
+            height: 14,
             borderRadius: "50%",
-            border: "1px solid #9d9d9d",
-            backgroundColor: "#000",
+            border: "1px solid var(--Basic-400)",
+            backgroundColor: "var(--Basic-900)",
           }}
         />
         <h4 style={{ fontWeight: 700, fontSize: 14 }}>{content.name}</h4>

@@ -3,6 +3,8 @@ import Image from "next/image";
 import localFont from "next/font/local";
 
 import "../styles/globals.css";
+import "../styles/typography.css";
+import "../styles/layout.css";
 import Nav from "../components/nav";
 import background from "@/images/blackwave.jpg";
 

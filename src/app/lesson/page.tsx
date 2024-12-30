@@ -4,19 +4,17 @@ import Accordion from "./components/accordion";
 
 export default function Lesson() {
   return (
-    <div
-      style={{
-        width: "80%",
-        background: "#f2f2f2",
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
+    <div className="modal-layer">
       <Bar />
-      <div>
+      <div className="modal-container">
         <PageTitle name="Lesson" />
+        <div style={{ padding: 10 }}>
+          <p className="body2">
+            컴퓨터 학원 강사로 직접 교육에 진행한 내용입니다.
+            <br />
+            자세한 내용을 보시려면 과정명을 클릭해 주세요.
+          </p>
+        </div>
         <Accordion />
       </div>
     </div>

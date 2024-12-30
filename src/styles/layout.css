@@ -1,0 +1,14 @@
+.modal-layer {
+  width: 80%;
+  height: 80vh;
+  border-radius: 16px;
+  background: var(--Basic-50);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-container {
+  height: calc(100% - 36px);
+  overflow: auto;
+}

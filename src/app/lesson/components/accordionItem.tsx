@@ -10,7 +10,7 @@ export default function AccordionItem({
   selectId: (id: number) => void;
 }) {
   return (
-    <div style={{ borderRadius: 8, backgroundColor: "#e9e9e9" }}>
+    <div style={{ borderRadius: 8, backgroundColor: "var(--Basic-100)" }}>
       <button
         style={{
           display: "flex",
@@ -18,7 +18,7 @@ export default function AccordionItem({
           justifyContent: "space-between",
           width: "100%",
           padding: "8px 10px",
-          border: "1px solid #c4c4c4",
+          border: "1px solid var(--Basic-300)",
           borderRadius: "inherit",
           textAlign: "left",
         }}
@@ -29,7 +29,7 @@ export default function AccordionItem({
         <span
           style={{
             display: "block",
-            borderTop: "6px solid #555",
+            borderTop: "6px solid var(--Basic-600)",
             borderLeft: "4px solid transparent",
             borderRight: "4px solid transparent",
             transform: content.id === selected ? "rotate(180deg)" : "",
@@ -44,9 +44,17 @@ export default function AccordionItem({
             borderBottomRightRadius: "inherit",
           }}
         >
-          <p style={{ fontWeight: 400, fontSize: 14, wordBreak: "keep-all" }}>
-            {content.description}
-          </p>
+          {content.description.map((item, index) => (
+            <>
+              <p
+                key={index}
+                style={{ fontWeight: 400, fontSize: 14, wordBreak: "keep-all" }}
+              >
+                {item}
+              </p>
+              {index + 1 !== content.description.length && <br />}
+            </>
+          ))}
         </div>
       )}
     </div>
