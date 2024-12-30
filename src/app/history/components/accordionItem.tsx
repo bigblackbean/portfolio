@@ -39,10 +39,7 @@ export default function AccordionItem({
         <div style={{ padding: "0 10px 10px 36px" }}>
           {content.description.map((item, index) => (
             <>
-              <p
-                key={index}
-                style={{ fontWeight: 400, fontSize: 14, wordBreak: "keep-all" }}
-              >
+              <p key={index} style={{ fontWeight: 400, fontSize: 14 }}>
                 {item}
               </p>
               {index + 1 !== content.description.length && <br />}

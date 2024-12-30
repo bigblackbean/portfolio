@@ -23,7 +23,7 @@ export default function Profile() {
       <Bar />
       <div className="modal-container">
         <PageTitle name="Profile" />
-        <div style={{ padding: 10 }}>
+        <div style={{ padding: 20 }}>
           <div style={{ marginBottom: 40 }}>
             <SectionTitle title="인적사항" />
             <ul>

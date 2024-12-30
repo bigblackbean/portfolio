@@ -1,6 +1,7 @@
 import { careers } from "./utils";
 import Bar from "../../components/bar";
 import PageTitle from "@/components/pageTitle";
+import IdCard from "./components/IdCard";
 
 export default function Career() {
   return (
@@ -12,9 +13,7 @@ export default function Career() {
           <ul>
             {careers.map((item) => (
               <li key={item.id} style={{ marginBottom: 10 }}>
-                <h3 className="h3">{item.company}</h3>
-                <p>{item.position}</p>
-                <p>{item.role}</p>
+                <IdCard data={item} />
               </li>
             ))}
           </ul>

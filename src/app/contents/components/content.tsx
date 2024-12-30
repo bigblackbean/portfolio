@@ -6,9 +6,7 @@ export default function Content({ project }: { project: Project }) {
   return (
     <div style={{ padding: 10 }}>
       <h4 style={{ margin: "16px 0", fontWeight: 700 }}>{project.title}</h4>
-      <p style={{ fontSize: 14, wordBreak: "keep-all" }}>
-        {project.description}
-      </p>
+      <p style={{ fontSize: 14 }}>{project.description}</p>
       <div style={{ margin: "16px 0" }}>
         <Image src={project.image} alt={project.title} />
       </div>
