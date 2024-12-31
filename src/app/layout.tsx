@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 
 import "../styles/globals.css";
 import "../styles/typography.css";
-import "../styles/layout.css";
 import Nav from "../components/nav";
 import background from "@/images/blackwave.jpg";
 
@@ -25,13 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={`${suiteSans} antialiased`}>
         <div
           style={{
             width: "100%",
             height: "100%",
-            position: "absolute",
+            position: "fixed",
             top: 0,
             left: 0,
           }}
@@ -41,20 +40,9 @@ export default function RootLayout({
             src={background}
             alt="background"
           />
-          <main
-            style={{
-              width: "100%",
-              height: "100%",
-              position: "fixed",
-              top: 0,
-              left: 0,
-              zIndex: 10,
-            }}
-          >
-            {children}
-          </main>
-          <Nav />
         </div>
+        <main style={{ width: "100%", height: "100%" }}>{children}</main>
+        <Nav />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { data } from "../utils";
+import { data } from "../variants";
 import AccordionItem from "./accordionItem";
 
 export default function Accordion() {

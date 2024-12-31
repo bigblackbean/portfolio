@@ -6,11 +6,12 @@ export default function Frame({ children }: { children: React.ReactNode }) {
         height: "80vh",
         borderRadius: 16,
         background: "var(--Basic-50)",
-        position: "absolute",
+        position: "fixed",
         top: "50%",
         left: "50%",
-        zIndex: 10,
+        zIndex: 20,
         transform: "translate(-50%, -50%)",
+        overflow: "hidden",
       }}
     >
       {children}

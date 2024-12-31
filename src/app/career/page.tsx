@@ -1,4 +1,4 @@
-import { careers } from "./utils";
+import { careers } from "./variants";
 import Bar from "../../components/bar";
 import PageTitle from "@/components/pageTitle";
 import IdCard from "./components/IdCard";

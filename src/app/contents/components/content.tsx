@@ -1,31 +1,14 @@
-import Image from "next/image";
-import { Project } from "../utils";
-import MarkTable from "./markTable";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+"use client";
 
-export function FullImage({
-  image,
-  alt,
-}: {
-  image: StaticImport;
-  alt: string;
-}) {
-  return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        position: "fixed",
-        top: 0,
-        left: 0,
-      }}
-    >
-      <Image src={image} alt={alt} />
-    </div>
-  );
-}
+import { useState } from "react";
+import Image from "next/image";
+import { Project } from "../variants";
+import MarkTable from "./mark-table";
+import expand from "@/images/icons/expand.svg";
+import FullImage from "@/components/full-image";
 
 export default function Content({ project }: { project: Project }) {
+  // const [fullScreen, setFullScreen] = useState<boolean>(false);
   return (
     <div
       style={{
@@ -41,9 +24,10 @@ export default function Content({ project }: { project: Project }) {
         <Image src={project.image} alt={project.title} />
         {/* <button
           style={{ color: "#fff", position: "absolute", top: 10, left: 10 }}
+          onClick={() => setFullScreen((prev) => !prev)}
           type="button"
         >
-          크게보기
+          <Image src={expand} alt="expand" />
         </button> */}
         {project.button && (
           <div
@@ -80,7 +64,7 @@ export default function Content({ project }: { project: Project }) {
           {project.notice}
         </p>
       )}
-      {/* <FullImage image={project.image} alt={project.title} /> */}
+      {/* {fullScreen && <FullImage image={project.image} alt={project.title} />} */}
     </div>
   );
 }

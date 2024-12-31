@@ -1,4 +1,4 @@
-import { historyData } from "../utils";
+import { historyData } from "../variants";
 
 export default function AccordionItem({
   content,

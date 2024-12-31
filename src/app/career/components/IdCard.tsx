@@ -1,4 +1,4 @@
-import { Career } from "../utils";
+import { Career } from "../variants";
 
 export default function IdCard({ data }: { data: Career }) {
   return (

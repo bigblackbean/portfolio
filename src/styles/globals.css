@@ -23,11 +23,17 @@
   }
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 body {
   color: var(--Basic-900);
   font-family: Arial, Helvetica, sans-serif;
   word-break: keep-all;
   box-sizing: content-box;
+  background-color: var(--Basic-900);
 }
 
 @layer utilities {

@@ -1,4 +1,4 @@
-import { Role } from "../utils";
+import { Role } from "../variants";
 
 export default function MarkTable({ roles }: { roles: Role[] }) {
   const score: number[] = [1, 2, 3, 4, 5];

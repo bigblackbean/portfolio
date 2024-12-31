@@ -10,7 +10,7 @@ export default function Lesson() {
       <Bar />
       <Container>
         <PageTitle name="Lesson" />
-        <div style={{ padding: 10 }}>
+        <div style={{ padding: "20px 20px 0 20px" }}>
           <p className="body2">
             컴퓨터 학원 강사로 직접 교육에 진행한 내용입니다.
             <br />

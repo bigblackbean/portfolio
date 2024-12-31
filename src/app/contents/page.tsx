@@ -1,4 +1,4 @@
-import { projects } from "./utils";
+import { projects } from "./variants";
 import Bar from "../../components/bar";
 import Content from "./components/content";
 import PageTitle from "@/components/pageTitle";

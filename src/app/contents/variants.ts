@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     title: "쏘핏 웹앱서비스",
     description:
-      "여성 스포츠웨어/언더웨어 셀렉트샵\n다양한 브랜드를 한 눈에 볼 수 있는 쇼핑 플랫폼\n스포츠웨어, 언더웨어에 대한 다양한 콘텐츠 소비와\n상품 구매까지 이어지는 서비스 경험을 제공",
+      "여성 스포츠웨어/언더웨어 셀렉트샵\n다양한 브랜드를 한 눈에 볼 수 있는 쇼핑 플랫폼\n스포츠웨어, 언더웨어에 대한 다양한 콘텐츠 소비와\n상품 구매까지 이어지는 서비스 경험을 제공 (Play Store / App Store Download)",
     image: sofitWeb,
     roles: [
       { id: 0, header: "기획", score: 3 },

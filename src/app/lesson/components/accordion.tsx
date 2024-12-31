@@ -16,7 +16,7 @@ export default function Accordion() {
   };
 
   return (
-    <div style={{ padding: 10 }}>
+    <div style={{ padding: 20 }}>
       <ul>
         {lessons.map((item) => (
           <li key={item.id} style={{ marginBottom: 10 }}>

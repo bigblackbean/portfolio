@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { certificate, person, skills } from "./utils";
+import { certificate, person, skills } from "./variants";
 import PageTitle from "@/components/pageTitle";
 import Frame from "@/components/frame";
 import Bar from "@/components/bar";
