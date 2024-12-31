@@ -1,22 +1,38 @@
-import { FunctionComponent } from "react";
-import Image from "next/image";
+"use client";
+
+import Image, { StaticImageData } from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import user from "@/images/icons/user.svg";
+import userGray from "@/images/icons/user-gray.svg";
 import paper from "@/images/icons/paper.svg";
+import paperGray from "@/images/icons/paper-gray.svg";
 import folder from "@/images/icons/folder.svg";
+import folderGray from "@/images/icons/folder-gray.svg";
 import ppt from "@/images/icons/ppt.svg";
+import pptGray from "@/images/icons/ppt-gray.svg";
 import film from "@/images/icons/film.svg";
+import filmGray from "@/images/icons/film-gray.svg";
 
-const navList = [
-  { name: "Profile", url: "/profile", image: user },
-  { name: "Career", url: "/career", image: paper },
-  { name: "Contents", url: "/contents", image: folder },
-  { name: "Lesson", url: "/lesson", image: ppt },
-  { name: "History", url: "/history", image: film },
+interface Navigator {
+  name: string;
+  url: string;
+  icon: StaticImageData;
+  defaultIcon: StaticImageData;
+}
+
+const navList: Navigator[] = [
+  { name: "Profile", url: "/profile", icon: user, defaultIcon: userGray },
+  { name: "Career", url: "/career", icon: paper, defaultIcon: paperGray },
+  { name: "Contents", url: "/contents", icon: folder, defaultIcon: folderGray },
+  { name: "Lesson", url: "/lesson", icon: ppt, defaultIcon: pptGray },
+  { name: "History", url: "/history", icon: film, defaultIcon: filmGray },
 ];
 
-const Nav: FunctionComponent = () => {
+export default function Nav() {
+  const current = usePathname();
+
   return (
     <div
       style={{
@@ -31,7 +47,7 @@ const Nav: FunctionComponent = () => {
       <ul style={{ display: "flex", padding: 8 }}>
         {navList.map((item) => (
           <li key={item.name} style={{ width: 64, height: 64 }}>
-            <Link href={item.url}>
+            <Link href={item.url} scroll={false}>
               <div
                 style={{
                   display: "flex",
@@ -50,11 +66,20 @@ const Nav: FunctionComponent = () => {
                       height: "100%",
                       objectFit: "cover",
                     }}
-                    src={item.image}
+                    src={current === item.url ? item.icon : item.defaultIcon}
                     alt={item.name}
                   />
                 </div>
-                <p style={{ fontSize: 12, textAlign: "center", color: "#fff" }}>
+                <p
+                  className="h5"
+                  style={{
+                    textAlign: "center",
+                    color:
+                      current === item.url
+                        ? "var(--Basic-0)"
+                        : "var(--Basic-400)",
+                  }}
+                >
                   {item.name}
                 </p>
               </div>
@@ -64,6 +89,4 @@ const Nav: FunctionComponent = () => {
       </ul>
     </div>
   );
-};
-
-export default Nav;
+}
