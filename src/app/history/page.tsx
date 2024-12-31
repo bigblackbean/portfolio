@@ -2,12 +2,14 @@ import { FunctionComponent } from "react";
 import Bar from "../../components/bar";
 import PageTitle from "@/components/pageTitle";
 import Accordion from "./components/accordion";
+import Frame from "@/components/frame";
+import Container from "@/components/container";
 
 const History: FunctionComponent = () => {
   return (
-    <div className="modal-layer">
+    <Frame>
       <Bar />
-      <div className="modal-container">
+      <Container>
         <PageTitle name="History" />
         <div style={{ padding: "10px 20px 0 20px" }}>
           <p
@@ -29,8 +31,8 @@ const History: FunctionComponent = () => {
             자세한 이야기를 보시려면 클릭해 주세요!
           </p>
         </div>
-      </div>
-    </div>
+      </Container>
+    </Frame>
   );
 };
 export default History;

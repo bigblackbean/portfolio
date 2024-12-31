@@ -29,42 +29,31 @@ export default function RootLayout({
       <body className={`${suiteSans} antialiased`}>
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
             width: "100%",
-            height: "100vh",
-            background: "#000",
+            height: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0,
           }}
         >
-          <div
+          <Image
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            src={background}
+            alt="background"
+          />
+          <main
             style={{
               width: "100%",
               height: "100%",
-              position: "absolute",
+              position: "fixed",
               top: 0,
               left: 0,
+              zIndex: 10,
             }}
           >
-            <Image
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              src={background}
-              alt="background"
-            />
-            <main
-              style={{
-                width: "100%",
-                height: "100%",
-                position: "fixed",
-                top: 0,
-                left: 0,
-                zIndex: 1,
-              }}
-            >
-              {children}
-            </main>
-            <Nav />
-          </div>
+            {children}
+          </main>
+          <Nav />
         </div>
       </body>
     </html>

@@ -1,12 +1,14 @@
 import PageTitle from "@/components/pageTitle";
 import Bar from "../../components/bar";
 import Accordion from "./components/accordion";
+import Frame from "@/components/frame";
+import Container from "@/components/container";
 
 export default function Lesson() {
   return (
-    <div className="modal-layer">
+    <Frame>
       <Bar />
-      <div className="modal-container">
+      <Container>
         <PageTitle name="Lesson" />
         <div style={{ padding: 10 }}>
           <p className="body2">
@@ -16,7 +18,7 @@ export default function Lesson() {
           </p>
         </div>
         <Accordion />
-      </div>
-    </div>
+      </Container>
+    </Frame>
   );
 }

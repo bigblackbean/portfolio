@@ -2,19 +2,21 @@ import { projects } from "./utils";
 import Bar from "../../components/bar";
 import Content from "./components/content";
 import PageTitle from "@/components/pageTitle";
+import Frame from "@/components/frame";
+import Container from "@/components/container";
 
 export default function Contents() {
   return (
-    <div className="modal-layer">
+    <Frame>
       <Bar />
-      <div className="modal-container">
+      <Container>
         <PageTitle name="Contents" />
         <div>
           {projects.map((project) => (
             <Content key={project.title} project={project} />
           ))}
         </div>
-      </div>
-    </div>
+      </Container>
+    </Frame>
   );
 }

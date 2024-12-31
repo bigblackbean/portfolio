@@ -5,20 +5,19 @@ export default function MarkTable({ roles }: { roles: Role[] }) {
 
   return (
     <div>
-      <h5 style={{ marginBottom: 8, fontSize: 14, fontWeight: 700 }}>
+      <h4 className="h4" style={{ marginBottom: 8 }}>
         프로젝트 참여도
-      </h5>
+      </h4>
       <table>
         <tbody>
           {roles.map((item) => (
             <tr key={item.id}>
               <th
+                className="body1"
                 style={{
                   width: 48,
                   padding: "4px 0",
                   textAlign: "left",
-                  fontSize: 14,
-                  fontWeight: 500,
                 }}
               >
                 {item.header}
@@ -34,7 +33,9 @@ export default function MarkTable({ roles }: { roles: Role[] }) {
                         height: 12,
                         borderRadius: "50%",
                         backgroundColor:
-                          item.score > index ? "#000" : "#cdcdcd",
+                          item.score > index
+                            ? "var(--Basic-900)"
+                            : "var(--Basic-300)",
                       }}
                     />
                   ))}

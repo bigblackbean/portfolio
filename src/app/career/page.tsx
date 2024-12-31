@@ -2,12 +2,14 @@ import { careers } from "./utils";
 import Bar from "../../components/bar";
 import PageTitle from "@/components/pageTitle";
 import IdCard from "./components/IdCard";
+import Frame from "@/components/frame";
+import Container from "@/components/container";
 
 export default function Career() {
   return (
-    <div className="modal-layer">
+    <Frame>
       <Bar />
-      <div className="modal-container">
+      <Container>
         <PageTitle name="Career" />
         <div style={{ padding: 10 }}>
           <ul>
@@ -18,7 +20,7 @@ export default function Career() {
             ))}
           </ul>
         </div>
-      </div>
-    </div>
+      </Container>
+    </Frame>
   );
 }

@@ -1,7 +1,9 @@
+import Image from "next/image";
 import { certificate, person, skills } from "./utils";
 import PageTitle from "@/components/pageTitle";
-import Bar from "../../components/bar";
-import Image from "next/image";
+import Frame from "@/components/frame";
+import Bar from "@/components/bar";
+import Container from "@/components/container";
 
 function SectionTitle({ title }: { title: string }) {
   return (
@@ -19,9 +21,9 @@ function SectionTitle({ title }: { title: string }) {
 
 export default function Profile() {
   return (
-    <div className="modal-layer">
+    <Frame>
       <Bar />
-      <div className="modal-container">
+      <Container>
         <PageTitle name="Profile" />
         <div style={{ padding: 20 }}>
           <div style={{ marginBottom: 40 }}>
@@ -79,7 +81,7 @@ export default function Profile() {
             </ul>
           </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </Frame>
   );
 }
