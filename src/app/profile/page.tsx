@@ -10,7 +10,7 @@ function SectionTitle({ title }: { title: string }) {
     <div
       style={{
         paddingBottom: 4,
-        borderBottom: "1px solid var(--Basic-900)",
+        borderBottom: "1px solid var(--basic-900)",
         marginBottom: 10,
       }}
     >
@@ -40,7 +40,7 @@ export default function Profile() {
                         width: 5,
                         height: 5,
                         borderRadius: "50%",
-                        backgroundColor: "var(--Basic-900)",
+                        backgroundColor: "var(--basic-900)",
                       }}
                     />
                     <p className="body1">{item}</p>
@@ -59,7 +59,7 @@ export default function Profile() {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p>{item.name}</p>
-                    <p style={{ color: "var(--Basic-400)" }}>{item.period}</p>
+                    <p style={{ color: "var(--basic-400)" }}>{item.period}</p>
                   </div>
                 </li>
               ))}

@@ -1,0 +1,111 @@
+.point {
+  color: var(--sub);
+}
+
+.main-text {
+  margin-bottom: 20px;
+  font-family: "Ria Sans";
+  font-size: 80px;
+  line-height: 1.5em;
+  color: var(--basic-0);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.main-balloon {
+  display: inline-block;
+  padding: 20px 32px;
+  margin: 0 auto 50px;
+  border-radius: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: var(--basic-0);
+  position: relative;
+}
+.main-balloon .arrow {
+  border-top: 30px solid var(--basic-0);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  bottom: -29px;
+  left: calc(50% - 20px);
+}
+.cup-text {
+  font-size: 18px;
+  font-weight: 300;
+  white-space: nowrap;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-comment {
+  color: var(--basic-0);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px 0 40px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5%;
+}
+.nav-item {
+  color: var(--basic-0);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.nav-item:hover {
+  opacity: 1;
+}
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--basic-0);
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+/* 모바일 환경 */
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 8vw;
+  }
+  .main-balloon {
+    font-size: 3.2vw;
+    padding: 2.4vw 4vw;
+    margin-bottom: 8vw;
+  }
+  .main-balloon .arrow {
+    border-top: 5vw solid var(--basic-0);
+    border-left: 3.2vw solid transparent;
+    border-right: 3.2vw solid transparent;
+    bottom: calc(-5vw + 1px);
+    left: calc(50% - 3.2vw);
+  }
+  .main-comment {
+    font-size: 3.2vw;
+    margin: 2.4vw 0 6vw;
+  }
+  .cup-text {
+    font-size: 2vw;
+  }
+  .nav-item {
+    font-size: 3.2vw;
+  }
+  .back {
+    width: 7.8vw;
+    height: 7.8vw;
+    border-width: 1.2px;
+  }
+}

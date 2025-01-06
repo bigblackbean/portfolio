@@ -13,7 +13,7 @@ export default function Content({ project }: { project: Project }) {
     <div
       style={{
         padding: "20px 20px 40px 20px",
-        borderBottom: "1px dashed var(--Basic-400)",
+        borderBottom: "1px dashed var(--basic-400)",
       }}
     >
       <h3 className="h3" style={{ margin: "16px 0" }}>
@@ -44,10 +44,10 @@ export default function Content({ project }: { project: Project }) {
               style={{
                 display: "block",
                 padding: "8px 16px",
-                border: "1px solid var(--Basic-0)",
+                border: "1px solid var(--basic-0)",
                 borderRadius: 20,
                 color: "#fff",
-                backgroundColor: "var(--Basic-900)",
+                backgroundColor: "var(--basic-900)",
               }}
             >
               {project.button.name}
@@ -59,7 +59,7 @@ export default function Content({ project }: { project: Project }) {
       {project.notice && (
         <p
           className="body2"
-          style={{ margin: "8px 0", color: "var(--Basic-500)" }}
+          style={{ margin: "8px 0", color: "var(--basic-500)" }}
         >
           {project.notice}
         </p>

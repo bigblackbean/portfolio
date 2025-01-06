@@ -5,9 +5,9 @@ export default function IdCard({ data }: { data: Career }) {
     <div
       style={{
         padding: 20,
-        border: "1px solid var(--Basic-200)",
+        border: "1px solid var(--basic-200)",
         borderRadius: 16,
-        backgroundColor: "var(--Basic-0)",
+        backgroundColor: "var(--basic-0)",
       }}
     >
       <div
@@ -22,7 +22,7 @@ export default function IdCard({ data }: { data: Career }) {
             {data.encompany}
           </h3>
           <p
-            style={{ fontSize: 12, fontWeight: 400, color: "var(--Basic-900)" }}
+            style={{ fontSize: 12, fontWeight: 400, color: "var(--basic-900)" }}
           >
             {data.field}
           </p>

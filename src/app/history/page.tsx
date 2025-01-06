@@ -17,8 +17,8 @@ const History: FunctionComponent = () => {
             style={{
               padding: 10,
               borderRadius: 8,
-              color: "var(--Basic-900)",
-              backgroundColor: "var(--Basic-100)",
+              color: "var(--basic-900)",
+              backgroundColor: "var(--basic-100)",
             }}
           >
             제가 다른 분야에 관심을 갖게 된 흐름을 이야기해 보았습니다. 저를
@@ -27,7 +27,7 @@ const History: FunctionComponent = () => {
         </div>
         <Accordion />
         <div style={{ padding: "0 0 40px 20px" }}>
-          <p className="body2" style={{ color: "var(--Basic-600)" }}>
+          <p className="body2" style={{ color: "var(--basic-600)" }}>
             자세한 이야기를 보시려면 클릭해 주세요!
           </p>
         </div>

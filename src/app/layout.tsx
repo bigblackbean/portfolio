@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import localFont from "next/font/local";
 
 import "../styles/globals.css";
 import "../styles/typography.css";
-import Nav from "../components/nav";
-import background from "@/images/blackwave.jpg";
 
 const suiteSans = localFont({
   src: "../fonts/SUITE-Variable.woff2",
@@ -14,8 +11,8 @@ const suiteSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "웹 프론트 개발자 이강희 포트폴리오",
+  title: "이강희의 포트폴리오",
+  description: "프론트엔드 웹 개발자 이강희 포트폴리오",
 };
 
 export default function RootLayout({
@@ -26,23 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${suiteSans} antialiased`}>
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "fixed",
-            top: 0,
-            left: 0,
-          }}
-        >
-          <Image
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={background}
-            alt="background"
-          />
-        </div>
         <main style={{ width: "100%", height: "100%" }}>{children}</main>
-        <Nav />
       </body>
     </html>
   );

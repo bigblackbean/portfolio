@@ -34,8 +34,8 @@ export default function MarkTable({ roles }: { roles: Role[] }) {
                         borderRadius: "50%",
                         backgroundColor:
                           item.score > index
-                            ? "var(--Basic-900)"
-                            : "var(--Basic-300)",
+                            ? "var(--basic-900)"
+                            : "var(--basic-300)",
                       }}
                     />
                   ))}

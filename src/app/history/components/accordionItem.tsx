@@ -29,8 +29,8 @@ export default function AccordionItem({
             width: 14,
             height: 14,
             borderRadius: "50%",
-            border: "1px solid var(--Basic-400)",
-            backgroundColor: "var(--Basic-900)",
+            border: "1px solid var(--basic-400)",
+            backgroundColor: "var(--basic-900)",
           }}
         />
         <h4 style={{ fontWeight: 700, fontSize: 14 }}>{content.name}</h4>

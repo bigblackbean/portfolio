@@ -76,8 +76,8 @@ export default function Nav() {
                     textAlign: "center",
                     color:
                       current === item.url
-                        ? "var(--Basic-0)"
-                        : "var(--Basic-400)",
+                        ? "var(--basic-0)"
+                        : "var(--basic-400)",
                   }}
                 >
                   {item.name}

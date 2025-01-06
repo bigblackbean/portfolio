@@ -6,7 +6,7 @@ export default function Bar() {
       style={{
         width: "100%",
         padding: "10px 16px",
-        backgroundColor: "var(--Basic-800)",
+        backgroundColor: "var(--basic-800)",
         borderTopLeftRadius: "inherit",
         borderTopRightRadius: "inherit",
         border: "inherit",
