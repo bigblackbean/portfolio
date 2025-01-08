@@ -1,11 +1,10 @@
 export default function PageTitle({ name }: { name: string }) {
   return (
     <h3
+      className="h3"
       style={{
-        margin: "8px 0",
-        fontSize: 20,
-        fontWeight: 700,
-        textAlign: "center",
+        padding: "20px 40px",
+        borderBottom: "1px solid var(--basic-200)",
       }}
     >
       {name}

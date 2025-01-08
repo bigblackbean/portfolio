@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Container from "@/components/container";
 import MainText from "@/components/main-text";
 import MainContents from "@/components/main-contents";
 import styles from "@/styles/main.module.css";
@@ -29,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Container>
+    <div style={{ height: "100%" }}>
       <div
         style={{
           display: "flex",
@@ -51,6 +50,6 @@ export default function Home() {
           </div>
         </button>
       )}
-    </Container>
+    </div>
   );
 }

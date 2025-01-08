@@ -1,16 +1,16 @@
 import { careers } from "./variants";
-import Bar from "../../components/bar";
-import PageTitle from "@/components/pageTitle";
+import PageTitle from "@/components/page-title";
 import IdCard from "./components/IdCard";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
+import Nav from "@/components/nav";
 
 export default function Career() {
   return (
     <Frame>
-      <Bar />
+      <Nav />
       <Container>
-        <PageTitle name="Career" />
+        <PageTitle name="경력" />
         <div style={{ padding: 10 }}>
           <ul>
             {careers.map((item) => (

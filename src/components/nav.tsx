@@ -3,87 +3,102 @@
 import Image, { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import styles from "@/styles/nav.module.css";
 
 import user from "@/images/icons/user.svg";
-import userGray from "@/images/icons/user-gray.svg";
 import paper from "@/images/icons/paper.svg";
-import paperGray from "@/images/icons/paper-gray.svg";
 import folder from "@/images/icons/folder.svg";
-import folderGray from "@/images/icons/folder-gray.svg";
 import ppt from "@/images/icons/ppt.svg";
-import pptGray from "@/images/icons/ppt-gray.svg";
 import film from "@/images/icons/film.svg";
-import filmGray from "@/images/icons/film-gray.svg";
+import Bar from "./bar";
 
 interface Navigator {
   name: string;
   url: string;
   icon: StaticImageData;
-  defaultIcon: StaticImageData;
+  description: string;
 }
 
 const navList: Navigator[] = [
-  { name: "Profile", url: "/profile", icon: user, defaultIcon: userGray },
-  { name: "Career", url: "/career", icon: paper, defaultIcon: paperGray },
-  { name: "Contents", url: "/contents", icon: folder, defaultIcon: folderGray },
-  { name: "Lesson", url: "/lesson", icon: ppt, defaultIcon: pptGray },
-  { name: "History", url: "/history", icon: film, defaultIcon: filmGray },
+  {
+    name: "프로필",
+    url: "/profile",
+    icon: user,
+    description: "간단한 소개 및 정보",
+  },
+  {
+    name: "경력",
+    url: "/career",
+    icon: paper,
+    description: "업무를 진행한 내역",
+  },
+  {
+    name: "작업물",
+    url: "/contents",
+    icon: folder,
+    description: "진행하고 참여했던 프로젝트",
+  },
+  {
+    name: "교육",
+    url: "/lesson",
+    icon: ppt,
+    description: "교육자로 제공한 내용",
+  },
+  {
+    name: "발자취",
+    url: "/history",
+    icon: film,
+    description: "이력에 대한 히스토리",
+  },
 ];
+
+export function NavItem({
+  item,
+  current,
+}: {
+  item: Navigator;
+  current: string;
+}) {
+  return (
+    <div>
+      <Link href={item.url} scroll={false}>
+        <div
+          className={styles.item}
+          style={{ background: current === item.url ? "var(--basic-100)" : "" }}
+        >
+          <div className={styles.icon}>
+            <Image
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+              src={item.icon}
+              alt={item.name}
+            />
+          </div>
+          <div className={styles.text}>
+            <h3 className="h3">{item.name}</h3>
+            <p className="body3" style={{ color: "var(--basic-500)" }}>
+              {item.description}
+            </p>
+          </div>
+        </div>
+      </Link>
+    </div>
+  );
+}
 
 export default function Nav() {
   const current = usePathname();
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
-        position: "fixed",
-        bottom: 10,
-        zIndex: 10,
-      }}
-    >
-      <ul style={{ display: "flex", padding: 8 }}>
+    <div className={styles["nav-frame"]}>
+      <Bar />
+      <ul className={styles.list}>
         {navList.map((item) => (
-          <li key={item.name} style={{ width: 64, height: 64 }}>
-            <Link href={item.url} scroll={false}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 4,
-                  width: "100%",
-                  height: "100%",
-                }}
-              >
-                <div style={{ width: 32, height: 32 }}>
-                  <Image
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                    src={current === item.url ? item.icon : item.defaultIcon}
-                    alt={item.name}
-                  />
-                </div>
-                <p
-                  className="h5"
-                  style={{
-                    textAlign: "center",
-                    color:
-                      current === item.url
-                        ? "var(--basic-0)"
-                        : "var(--basic-400)",
-                  }}
-                >
-                  {item.name}
-                </p>
-              </div>
-            </Link>
+          <li key={item.name}>
+            <NavItem item={item} current={current} />
           </li>
         ))}
       </ul>

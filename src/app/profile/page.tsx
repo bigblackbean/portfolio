@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { certificate, person, skills } from "./variants";
-import PageTitle from "@/components/pageTitle";
+import PageTitle from "@/components/page-title";
 import Frame from "@/components/frame";
-import Bar from "@/components/bar";
 import Container from "@/components/container";
+import Nav from "@/components/nav";
 
 function SectionTitle({ title }: { title: string }) {
   return (
@@ -22,9 +22,10 @@ function SectionTitle({ title }: { title: string }) {
 export default function Profile() {
   return (
     <Frame>
-      <Bar />
+      <Nav />
       <Container>
-        <PageTitle name="Profile" />
+        <PageTitle name="프로필" />
+        {/* 
         <div style={{ padding: 20 }}>
           <div style={{ marginBottom: 40 }}>
             <SectionTitle title="인적사항" />
@@ -80,7 +81,7 @@ export default function Profile() {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </Container>
     </Frame>
   );

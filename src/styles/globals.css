@@ -30,7 +30,7 @@
     var(--primary-600) 100%
   );
 
-  --frame-width: 80%;
+  --br-large: 32px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -59,8 +59,8 @@ body {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 768px) {
   :root {
-    --frame-width: 90%;
+    --br-large: 20px;
   }
 }

@@ -1,17 +1,17 @@
 import { FunctionComponent } from "react";
-import Bar from "../../components/bar";
-import PageTitle from "@/components/pageTitle";
+import PageTitle from "@/components/page-title";
 import Accordion from "./components/accordion";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
+import Nav from "@/components/nav";
 
 const History: FunctionComponent = () => {
   return (
     <Frame>
-      <Bar />
+      <Nav />
       <Container>
-        <PageTitle name="History" />
-        <div style={{ padding: "10px 20px 0 20px" }}>
+        <PageTitle name="발자취" />
+        {/* <div style={{ padding: "10px 20px 0 20px" }}>
           <p
             className="body2"
             style={{
@@ -30,7 +30,7 @@ const History: FunctionComponent = () => {
           <p className="body2" style={{ color: "var(--basic-600)" }}>
             자세한 이야기를 보시려면 클릭해 주세요!
           </p>
-        </div>
+        </div> */}
       </Container>
     </Frame>
   );
