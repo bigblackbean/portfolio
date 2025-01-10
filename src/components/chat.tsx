@@ -6,16 +6,18 @@ export default function Chat({
   direction,
   children,
   talkProfile,
+  image,
 }: {
   direction: string;
   children: React.ReactNode;
   talkProfile?: { image: StaticImageData; name: string };
+  image?: boolean;
 }) {
   return (
     <div
       className={`${styles.chat} ${
         direction === "left" ? styles.left : styles.right
-      } body1`}
+      } ${image && styles.img} body1`}
     >
       {talkProfile && (
         <div className={styles.profile}>

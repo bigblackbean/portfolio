@@ -38,6 +38,7 @@
 }
 
 .profile {
+  flex-shrink: 0;
   width: 48px;
   height: 48px;
   border-radius: 16px;
@@ -53,6 +54,10 @@
   min-width: 60%;
   padding: 20px;
   margin-bottom: 20px;
+}
+.chat.img .balloon {
+  min-width: 40%;
+  max-width: 50%;
 }
 .chat.left .balloon {
   border-radius: 0 var(--br-medium) var(--br-medium) var(--br-medium);
@@ -78,8 +83,20 @@
 @media (max-width: 768px) {
   .frame {
     display: block;
+    height: calc(100vh - 40px);
+  }
+  .scroll {
+    padding: 10px;
   }
   .container {
     height: calc(100% - 145px);
+  }
+  .chat .balloon {
+    padding: 10px;
+    max-width: 96%;
+  }
+  .chat.img .balloon {
+    min-width: 60%;
+    max-width: 80%;
   }
 }

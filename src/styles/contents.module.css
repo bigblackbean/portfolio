@@ -1,0 +1,23 @@
+.content {
+  margin-bottom: 20px;
+}
+.thumbnail {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--br-small);
+  margin-bottom: 10px;
+  background: var(--basic-0);
+  overflow: hidden;
+}
+.thumbnail img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+.link {
+  color: var(--primary-600);
+  text-decoration: underline;
+}
+.notice {
+  color: var(--basic-400);
+}

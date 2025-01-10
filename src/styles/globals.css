@@ -34,6 +34,7 @@
 
   --br-large: 32px;
   --br-medium: 24px;
+  --br-small: 16px;
 }
 
 /* @media (prefers-color-scheme: dark) {

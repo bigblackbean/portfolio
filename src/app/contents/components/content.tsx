@@ -2,69 +2,47 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import styles from "@/styles/contents.module.css";
 import { Project } from "../variants";
 import MarkTable from "./mark-table";
 import expand from "@/images/icons/expand.svg";
 import FullImage from "@/components/full-image";
+import Chat from "@/components/chat";
 
 export default function Content({ project }: { project: Project }) {
   // const [fullScreen, setFullScreen] = useState<boolean>(false);
   return (
-    <div
-      style={{
-        padding: "20px 20px 40px 20px",
-        borderBottom: "1px dashed var(--basic-400)",
-      }}
-    >
-      <h3 className="h3" style={{ margin: "16px 0" }}>
-        {project.title}
-      </h3>
-      <p className="body2">{project.description}</p>
-      <div style={{ margin: "16px 0", position: "relative" }}>
-        <Image src={project.image} alt={project.title} />
-        {/* <button
-          style={{ color: "#fff", position: "absolute", top: 10, left: 10 }}
-          onClick={() => setFullScreen((prev) => !prev)}
-          type="button"
-        >
-          <Image src={expand} alt="expand" />
-        </button> */}
-        {project.button && (
-          <div
-            style={{
-              position: "absolute",
-              bottom: 16,
-              right: 16,
-            }}
+    <div className={styles.content}>
+      <Chat direction="left" image>
+        <div className={styles.thumbnail}>
+          <Image src={project.image.thumbnail} alt={project.image.title} />
+        </div>
+        <h4 className="h4">{project.image.title}</h4>
+        <p className="body2">{project.image.sub}</p>
+        {project.image.url && (
+          <a
+            href={project.image.url}
+            target="_blank"
+            className={`${styles.link} body3`}
           >
-            <a
-              href={project.button.url}
-              className="body1"
-              target="_blank"
-              style={{
-                display: "block",
-                padding: "8px 16px",
-                border: "1px solid var(--basic-0)",
-                borderRadius: 20,
-                color: "#fff",
-                backgroundColor: "var(--basic-900)",
-              }}
-            >
-              {project.button.name}
-            </a>
-          </div>
+            {project.image.url}
+          </a>
         )}
-      </div>
-      <MarkTable roles={project.roles} />
-      {project.notice && (
-        <p
-          className="body2"
-          style={{ margin: "8px 0", color: "var(--basic-500)" }}
-        >
-          {project.notice}
-        </p>
-      )}
-      {/* {fullScreen && <FullImage image={project.image} alt={project.title} />} */}
+        {project.image.notice && (
+          <p className={`${styles.notice} body3`}>{project.image.notice}</p>
+        )}
+      </Chat>
+      <Chat direction="left">
+        <div style={{ marginBottom: 10 }}>
+          {project.description.map((item, index) => (
+            <div key={index}>
+              <p>{item}</p>
+              <br />
+            </div>
+          ))}
+        </div>
+        <MarkTable roles={project.roles} />
+      </Chat>
     </div>
   );
 }
