@@ -7,6 +7,7 @@
   padding: 10px;
   border-radius: var(--br-large);
   background: var(--basic-50);
+  box-shadow: 0 10px 24px var(--shadow);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -14,11 +15,58 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  border-radius: var(--br-large);
+  border-radius: inherit;
   background: var(--basic-0);
 }
 
+.title {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.scroll {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.profile {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.chat {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.chat .balloon {
+  width: auto;
+  min-width: 60%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.chat.left .balloon {
+  border-radius: 0 var(--br-medium) var(--br-medium) var(--br-medium);
+  color: var(--basic-900);
+  background: var(--basic-50);
+}
+.chat.right .balloon {
+  margin-left: auto;
+  border-radius: var(--br-medium) 0 var(--br-medium) var(--br-medium);
+  color: var(--basic-0);
+  background: var(--primary-600);
+}
+
+/* 노트북, 태블렛 환경 */
 @media (max-width: 1240px) {
   .frame {
     width: calc(100% - 40px);
@@ -26,6 +74,7 @@
   }
 }
 
+/* 모바일 환경 */
 @media (max-width: 768px) {
   .frame {
     display: block;

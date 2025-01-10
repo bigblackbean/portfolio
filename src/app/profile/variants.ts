@@ -13,6 +13,11 @@ import xd from "@/images/logos/XD.svg";
 import notion from "@/images/logos/Notion.svg";
 import slack from "@/images/logos/Slack.svg";
 
+export interface Intro {
+  id: number;
+  question: string;
+  answer: string;
+}
 export interface Skill {
   name: string;
   image: StaticImport;
@@ -23,13 +28,13 @@ export interface Certi {
   period: string;
 }
 
-export const person = [
-  "이강희",
-  "1991.07.05",
-  "서울 관악구 신림동",
-  "010-2323-6929",
-  "bigblackbean@naver.com",
-  "INTP / ENTP",
+export const person: Intro[] = [
+  { id: 1, question: "이름은", answer: "이강희" },
+  { id: 2, question: "생년월일은", answer: "1991.07.05" },
+  { id: 3, question: "사는 곳은", answer: "서울 관악구 신림동" },
+  { id: 4, question: "전화번호는", answer: "010-2323-6929" },
+  { id: 5, question: "이메일은", answer: "bigblackbean@naver.com" },
+  { id: 6, question: "MBTI는", answer: "INTP / ENTP" },
 ];
 
 export const certificate: Certi[] = [

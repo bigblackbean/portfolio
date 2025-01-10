@@ -1,21 +1,69 @@
 import Image from "next/image";
 import { certificate, person, skills } from "./variants";
-import PageTitle from "@/components/page-title";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
 import Nav from "@/components/nav";
+import Chat from "@/components/chat";
+import profile from "@/images/profile/profile01.jpg";
 
-function SectionTitle({ title }: { title: string }) {
+export function Person() {
   return (
-    <div
-      style={{
-        paddingBottom: 4,
-        borderBottom: "1px solid var(--basic-900)",
-        marginBottom: 10,
-      }}
-    >
-      <h3 className="h3">{title}</h3>
-    </div>
+    <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+      <>
+        <p>안녕하세요,</p>
+        <br />
+        <ul>
+          {person.map((item) => (
+            <li key={item.id}>
+              <p>
+                <span style={{ marginRight: 8, color: "var(--basic-500)" }}>
+                  {item.question}
+                </span>
+                {item.answer}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </>
+    </Chat>
+  );
+}
+
+export function Certificate() {
+  return (
+    <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+      <p>자격증 종류는,</p>
+      <br />
+      <ul>
+        {certificate.map((item) => (
+          <li key={item.name}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>{item.name}</p>
+              <p style={{ color: "var(--basic-500)" }}>{item.period}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Chat>
+  );
+}
+
+export function Skills() {
+  return (
+    <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+      <p>제가 다루는 프로그램 및 프로그래밍 언어는,</p>
+      <br />
+      <ul>
+        {skills.map((item) => (
+          <li key={item.name} style={{ marginBottom: 10 }}>
+            <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+              <Image width={24} src={item.image} alt={item.name} />
+              <p className="h4">{item.name}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Chat>
   );
 }
 
@@ -23,65 +71,19 @@ export default function Profile() {
   return (
     <Frame>
       <Nav />
-      <Container>
-        <PageTitle name="프로필" />
-        {/* 
-        <div style={{ padding: 20 }}>
-          <div style={{ marginBottom: 40 }}>
-            <SectionTitle title="인적사항" />
-            <ul>
-              {person.map((item) => (
-                <li key={item} style={{ marginBottom: 8 }}>
-                  <div
-                    style={{ display: "flex", alignItems: "center", gap: 8 }}
-                  >
-                    <span
-                      style={{
-                        display: "block",
-                        width: 5,
-                        height: 5,
-                        borderRadius: "50%",
-                        backgroundColor: "var(--basic-900)",
-                      }}
-                    />
-                    <p className="body1">{item}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div style={{ marginBottom: 40 }}>
-            <SectionTitle title="자격증" />
-            <ul>
-              {certificate.map((item) => (
-                <li key={item.name} style={{ marginBottom: 8 }}>
-                  <div
-                    className="body1"
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                  >
-                    <p>{item.name}</p>
-                    <p style={{ color: "var(--basic-400)" }}>{item.period}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div style={{ marginBottom: 40 }}>
-            <SectionTitle title="기술" />
-            <ul>
-              {skills.map((item) => (
-                <li key={item.name} style={{ marginBottom: 10 }}>
-                  <div
-                    style={{ display: "flex", gap: 10, alignItems: "center" }}
-                  >
-                    <Image width={24} src={item.image} alt={item.name} />
-                    <p className="h4">{item.name}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div> */}
+      <Container title="프로필">
+        <Chat direction="right">
+          <p>프로필을 알려주세요.</p>
+        </Chat>
+        <Person />
+        <Chat direction="right">
+          <p>자격증은 어떤 게 있나요?</p>
+        </Chat>
+        <Certificate />
+        <Chat direction="right">
+          <p>사용할 수 있는 프로그램, 언어 등은 무엇이 있나요?</p>
+        </Chat>
+        <Skills />
       </Container>
     </Frame>
   );

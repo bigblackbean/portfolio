@@ -1,4 +1,3 @@
-import PageTitle from "@/components/page-title";
 import Bar from "../../components/bar";
 import Accordion from "./components/accordion";
 import Frame from "@/components/frame";
@@ -9,8 +8,7 @@ export default function Lesson() {
   return (
     <Frame>
       <Nav />
-      <Container>
-        <PageTitle name="교육" />
+      <Container title="교육">
         {/* <div style={{ padding: "20px 20px 0 20px" }}>
           <p className="body2">
             컴퓨터 학원 강사로 직접 교육에 진행한 내용입니다.

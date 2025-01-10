@@ -1,5 +1,4 @@
 import { careers } from "./variants";
-import PageTitle from "@/components/page-title";
 import IdCard from "./components/IdCard";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
@@ -9,8 +8,7 @@ export default function Career() {
   return (
     <Frame>
       <Nav />
-      <Container>
-        <PageTitle name="경력" />
+      <Container title="경력">
         <div style={{ padding: 10 }}>
           <ul>
             {careers.map((item) => (

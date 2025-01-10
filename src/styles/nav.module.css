@@ -2,7 +2,7 @@
   flex-shrink: 0;
   width: 240px;
   height: 100%;
-  border-radius: var(--br-large);
+  border-radius: inherit;
   background: var(--basic-0);
   overflow: hidden;
 }

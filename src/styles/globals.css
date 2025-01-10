@@ -30,7 +30,10 @@
     var(--primary-600) 100%
   );
 
+  --shadow: #00000040;
+
   --br-large: 32px;
+  --br-medium: 24px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -59,8 +62,10 @@ body {
   }
 }
 
+/* 모바일 환경 */
 @media (max-width: 768px) {
   :root {
     --br-large: 20px;
+    --br-medium: 16px;
   }
 }

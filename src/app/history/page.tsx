@@ -1,5 +1,4 @@
 import { FunctionComponent } from "react";
-import PageTitle from "@/components/page-title";
 import Accordion from "./components/accordion";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
@@ -9,8 +8,7 @@ const History: FunctionComponent = () => {
   return (
     <Frame>
       <Nav />
-      <Container>
-        <PageTitle name="발자취" />
+      <Container title="발자취">
         {/* <div style={{ padding: "10px 20px 0 20px" }}>
           <p
             className="body2"
