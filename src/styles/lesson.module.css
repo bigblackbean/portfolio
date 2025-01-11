@@ -1,0 +1,32 @@
+.accordian {
+  max-width: 60%;
+}
+.accordian-item {
+  background: var(--basic-50);
+  /* border-radius: var(--br-large); */
+  border-radius: 32px;
+}
+.accordian-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  border-radius: inherit;
+  background: var(--basic-100);
+}
+.arrow {
+  width: 21px;
+  height: 21px;
+}
+.contents {
+  padding: 20px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+@media (max-width: 768px) {
+  .accordian {
+    min-width: 240px;
+  }
+}

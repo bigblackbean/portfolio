@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { lessons } from "../utils";
+import styles from "@/styles/lesson.module.css";
 import AccordionItem from "./accordionItem";
 
 export default function Accordion() {
@@ -16,7 +17,7 @@ export default function Accordion() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className={styles.accordian}>
       <ul>
         {lessons.map((item) => (
           <li key={item.id} style={{ marginBottom: 10 }}>

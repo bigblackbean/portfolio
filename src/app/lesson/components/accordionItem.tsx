@@ -1,4 +1,7 @@
+import Image from "next/image";
 import { LessonData } from "../utils";
+import styles from "@/styles/lesson.module.css";
+import arrow from "@/images/icons/back-black.svg";
 
 export default function AccordionItem({
   content,
@@ -10,43 +13,28 @@ export default function AccordionItem({
   selectId: (id: number) => void;
 }) {
   return (
-    <div style={{ borderRadius: 8, backgroundColor: "var(--basic-100)" }}>
+    <div className={styles["accordian-item"]}>
       <button
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "100%",
-          padding: "8px 10px",
-          border: "1px solid var(--basic-300)",
-          borderRadius: "inherit",
-          textAlign: "left",
-        }}
+        className={styles["accordian-button"]}
         onClick={() => selectId(content.id)}
         type="button"
       >
-        <h4 style={{ fontWeight: 700, fontSize: 14 }}>{content.name}</h4>
-        <span
-          style={{
-            display: "block",
-            borderTop: "6px solid var(--basic-600)",
-            borderLeft: "4px solid transparent",
-            borderRight: "4px solid transparent",
-            transform: content.id === selected ? "rotate(180deg)" : "",
-          }}
-        />
-      </button>
-      {content.id === selected && (
+        <h4 className="body1">{content.name}</h4>
         <div
+          className={styles.arrow}
           style={{
-            padding: 10,
-            borderBottomLeftRadius: "inherit",
-            borderBottomRightRadius: "inherit",
+            transform:
+              content.id === selected ? "rotate(90deg)" : "rotate(-90deg)",
           }}
         >
+          <Image src={arrow} alt="arrow" />
+        </div>
+      </button>
+      {content.id === selected && (
+        <div className={styles.contents}>
           {content.description.map((item, index) => (
             <>
-              <p key={index} style={{ fontWeight: 400, fontSize: 14 }}>
+              <p key={index} className="body2">
                 {item}
               </p>
               {index + 1 !== content.description.length && <br />}
