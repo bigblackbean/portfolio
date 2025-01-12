@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { data } from "../variants";
 import AccordionItem from "./accordionItem";
+import styles from "@/styles/history.module.css";
 
 export default function Accordion() {
   const [selectedId, setSelectedId] = useState<number>(0);
@@ -16,7 +17,7 @@ export default function Accordion() {
   };
 
   return (
-    <div style={{ padding: 10 }}>
+    <div className={styles.block}>
       <ul>
         {data.map((item) => (
           <li key={item.id} style={{ marginBottom: 10 }}>

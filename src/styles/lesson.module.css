@@ -13,6 +13,7 @@
   width: 100%;
   padding: 20px;
   border-radius: inherit;
+  text-align: left;
   background: var(--basic-100);
 }
 .arrow {

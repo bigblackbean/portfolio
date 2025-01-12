@@ -1,4 +1,5 @@
 import { historyData } from "../variants";
+import styles from "@/styles/history.module.css";
 
 export default function AccordionItem({
   content,
@@ -9,42 +10,45 @@ export default function AccordionItem({
   selected: number;
   selectId: (id: number) => void;
 }) {
+  const thisSelected: boolean = content.id === selected;
+
   return (
-    <div style={{ borderRadius: 8 }}>
-      <button
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          width: "100%",
-          padding: "8px 10px",
-          textAlign: "left",
-        }}
-        onClick={() => selectId(content.id)}
-        type="button"
-      >
-        <span
-          style={{
-            display: "block",
-            width: 14,
-            height: 14,
-            borderRadius: "50%",
-            border: "1px solid var(--basic-400)",
-            backgroundColor: "var(--basic-900)",
-          }}
-        />
-        <h4 style={{ fontWeight: 700, fontSize: 14 }}>{content.name}</h4>
-      </button>
-      {content.id === selected && (
-        <div style={{ padding: "0 10px 10px 36px" }}>
+    <div
+      className={styles["accordian-item"]}
+      style={{ height: thisSelected ? "auto" : "calc(21px + 21px + 40px)" }}
+    >
+      <div className={styles["accordian-button"]}>
+        <h4 className="h4">{content.name}</h4>
+        {!thisSelected && (
+          <button
+            className={styles.open}
+            onClick={() => selectId(content.id)}
+            type="button"
+          >
+            <p className="body2">{content.description[0]}</p>
+            <div className={styles.more}>
+              <p className="body3">더보기</p>
+            </div>
+          </button>
+        )}
+      </div>
+      {thisSelected && (
+        <div className={styles.contents}>
           {content.description.map((item, index) => (
             <>
-              <p key={index} style={{ fontWeight: 400, fontSize: 14 }}>
+              <p key={index} className="body2">
                 {item}
               </p>
               {index + 1 !== content.description.length && <br />}
             </>
           ))}
+          <button
+            className={styles.close}
+            onClick={() => selectId(content.id)}
+            type="button"
+          >
+            <p className="body3">줄이기</p>
+          </button>
         </div>
       )}
     </div>
