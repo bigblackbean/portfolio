@@ -1,5 +1,5 @@
 import { careers } from "./variants";
-import IdCard from "./components/IdCard";
+import IdCard from "./components/id-card";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
 import Nav from "@/components/nav";
