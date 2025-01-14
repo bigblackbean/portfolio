@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { data } from "../variants";
 import AccordionItem from "./accordionItem";
 import styles from "@/styles/history.module.css";

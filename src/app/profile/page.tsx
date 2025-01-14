@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { certificate, person, skills } from "./variants";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
@@ -31,7 +32,7 @@ export function Person() {
 export function Certificate() {
   return (
     <Chat direction="left">
-      <p>자격증 종류는,</p>
+      <p>자격증과 취득일입니다.</p>
       <br />
       <ul>
         {certificate.map((item) => (
@@ -50,7 +51,7 @@ export function Certificate() {
 export function Skills() {
   return (
     <Chat direction="left">
-      <p>제가 다루는 프로그램 및 프로그래밍 언어는,</p>
+      <p>제가 다루는 프로그램 및 프로그래밍 언어입니다.</p>
       <br />
       <ul>
         {skills.map((item) => (

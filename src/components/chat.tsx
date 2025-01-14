@@ -1,9 +1,10 @@
 "use client";
 
-import styles from "@/styles/frame.module.css";
 import Image from "next/image";
-import kanghee from "@/images/profile/kanghee.png";
 import { useEffect, useRef, useState } from "react";
+
+import kanghee from "/public/images/profile/kanghee.png";
+import styles from "@/styles/frame.module.css";
 
 export default function Chat({
   direction,

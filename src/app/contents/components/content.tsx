@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+// import { useState } from "react";
+
 import styles from "@/styles/contents.module.css";
 import { Project } from "../variants";
 import MarkTable from "./mark-table";
-import expand from "@/images/icons/expand.svg";
-import FullImage from "@/components/full-image";
+// import expand from "/public/images/icons/expand.svg";
+// import FullImage from "@/components/full-image";
 import Chat from "@/components/chat";
 
 export default function Content({ project }: { project: Project }) {

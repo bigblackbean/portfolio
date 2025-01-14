@@ -1,7 +1,8 @@
-import chat from "@/images/icons/3d-chat.png";
 import Image from "next/image";
 import Link from "next/link";
+
 import styles from "@/styles/main.module.css";
+import chat from "/public/images/icons/3d-chat.png";
 
 interface NavItem {
   name: string;

@@ -3,13 +3,13 @@
 import Image, { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import styles from "@/styles/nav.module.css";
 
-import user from "@/images/icons/user.svg";
-import paper from "@/images/icons/paper.svg";
-import folder from "@/images/icons/folder.svg";
-import ppt from "@/images/icons/ppt.svg";
-import film from "@/images/icons/film.svg";
+import styles from "@/styles/nav.module.css";
+import user from "/public/images/icons/user.svg";
+import paper from "/public/images/icons/paper.svg";
+import folder from "/public/images/icons/folder.svg";
+import ppt from "/public/images/icons/ppt.svg";
+import film from "/public/images/icons/film.svg";
 import Bar from "./bar";
 
 interface Navigator {

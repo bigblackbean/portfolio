@@ -5,7 +5,7 @@ import "../styles/globals.css";
 import "../styles/typography.css";
 
 const suiteSans = localFont({
-  src: "../fonts/SUITE-Variable.woff2",
+  src: "../../public/fonts/SUITE-Variable.woff2",
   // variable: "--font-geist-sans",
   weight: "100 900",
 });
@@ -13,6 +13,14 @@ const suiteSans = localFont({
 export const metadata: Metadata = {
   title: "이강희의 포트폴리오",
   description: "프론트엔드 웹 개발자 이강희 포트폴리오",
+  openGraph: {
+    title: "이강희의 포트폴리오",
+    description: "프론트엔드 웹 개발자 이강희 포트폴리오",
+    locale: "ko_KR",
+  },
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 };
 
 export default function RootLayout({

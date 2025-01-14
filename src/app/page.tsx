@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+
+import styles from "@/styles/main.module.css";
 import MainText from "@/components/main-text";
 import MainContents from "@/components/main-contents";
-import styles from "@/styles/main.module.css";
-import arrow from "@/images/icons/back.svg";
-import Image from "next/image";
+import arrow from "/public/images/icons/back.svg";
 
 export default function Home() {
   const [clicked, setClicked] = useState<boolean>(false);

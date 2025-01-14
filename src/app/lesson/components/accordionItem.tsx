@@ -1,8 +1,9 @@
 import Image from "next/image";
+
 import { LessonData } from "../utils";
-import styles from "@/styles/lesson.module.css";
-import arrow from "@/images/icons/back-black.svg";
 import Chat from "@/components/chat";
+import arrow from "/public/images/icons/back-black.svg";
+import styles from "@/styles/lesson.module.css";
 
 export default function AccordionItem({
   content,

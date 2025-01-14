@@ -1,13 +1,13 @@
 import { StaticImageData } from "next/image";
 
-import sofitWeb from "@/images/contents/project-01-sofitweb.jpg";
-import sofitSeller from "@/images/contents/project-02-sofitseller.jpg";
-import sofitAdmin from "@/images/contents/project-03-sofitadmin.jpg";
-import sofitHome from "@/images/contents/project-04-sofithome.jpg";
-import inconVes from "@/images/contents/project-05-inconves.jpg";
-import inconKcity from "@/images/contents/project-06-inconkcity.jpg";
-import inconKiapi from "@/images/contents/project-07-inconkiapi.jpg";
-import inconGyeongju from "@/images/contents/project-08-incongyeongju.jpg";
+import sofitWeb from "/public/images/contents/project-01-sofitweb.jpg";
+import sofitSeller from "/public/images/contents/project-02-sofitseller.jpg";
+import sofitAdmin from "/public/images/contents/project-03-sofitadmin.jpg";
+import sofitHome from "/public/images/contents/project-04-sofithome.jpg";
+import inconVes from "/public/images/contents/project-05-inconves.jpg";
+import inconKcity from "/public/images/contents/project-06-inconkcity.jpg";
+import inconKiapi from "/public/images/contents/project-07-inconkiapi.jpg";
+import inconGyeongju from "/public/images/contents/project-08-incongyeongju.jpg";
 
 export interface Role {
   id: number;

@@ -1,7 +1,8 @@
 import Image from "next/image";
+
 import styles from "@/styles/main.module.css";
-import papercup from "@/images/papercup.png";
 import MainNav from "./main-nav";
+import papercup from "/public/images/papercup.png";
 
 export default function MainContents({
   clicked,

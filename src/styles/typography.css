@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ria Sans";
-  src: url("../fonts/RiaSans-ExtraBold.woff2") format("woff2");
+  src: url("/fonts/RiaSans-ExtraBold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;

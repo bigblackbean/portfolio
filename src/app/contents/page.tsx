@@ -3,7 +3,6 @@ import Content from "./components/content";
 import Frame from "@/components/frame";
 import Container from "@/components/container";
 import Nav from "@/components/nav";
-import profile from "@/images/profile/profile01.jpg";
 import Chat from "@/components/chat";
 
 export default function Contents() {

@@ -1,17 +1,17 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-import figma from "@/images/logos/Figma.svg";
-import react from "@/images/logos/React.svg";
-import typescript from "@/images/logos/Typescript.svg";
-import javascript from "@/images/logos/Javascript.svg";
-import html from "@/images/logos/HTML5.svg";
-import css from "@/images/logos/CSS3.svg";
-import photoshop from "@/images/logos/Photoshop.svg";
-import illustrator from "@/images/logos/Illustrator.svg";
-import indesign from "@/images/logos/Indesign.svg";
-import xd from "@/images/logos/XD.svg";
-import notion from "@/images/logos/Notion.svg";
-import slack from "@/images/logos/Slack.svg";
+import figma from "/public/images/logos/Figma.svg";
+import react from "/public/images/logos/React.svg";
+import typescript from "/public/images/logos/Typescript.svg";
+import javascript from "/public/images/logos/Javascript.svg";
+import html from "/public/images/logos/HTML5.svg";
+import css from "/public/images/logos/CSS3.svg";
+import photoshop from "/public/images/logos/Photoshop.svg";
+import illustrator from "/public/images/logos/Illustrator.svg";
+import indesign from "/public/images/logos/Indesign.svg";
+import xd from "/public/images/logos/XD.svg";
+import notion from "/public/images/logos/Notion.svg";
+import slack from "/public/images/logos/Slack.svg";
 
 export interface Intro {
   id: number;
