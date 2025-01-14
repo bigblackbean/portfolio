@@ -39,9 +39,9 @@ export const person: Intro[] = [
 
 export const certificate: Certi[] = [
   { name: "KPC 그래픽 전문강사", period: "2021/10" },
-  { name: "GTQid(인디자인) 1급", period: "2021/08" },
-  { name: "GTQi(일러스트레이터) 1급", period: "2021/07" },
-  { name: "GTQ(포토샵) 1급", period: "2018/06" },
+  { name: "GTQid 1급", period: "2021/10" },
+  { name: "GTQi 1급", period: "2021/07" },
+  { name: "GTQ 1급", period: "2018/06" },
   { name: "웹디자인기능사", period: "2020/06" },
   { name: "컴퓨터활용능력 2급", period: "2016/10" },
   { name: "운전면허 1종 보통", period: "2011/10" },

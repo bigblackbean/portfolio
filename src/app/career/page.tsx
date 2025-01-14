@@ -4,7 +4,6 @@ import Frame from "@/components/frame";
 import Container from "@/components/container";
 import Nav from "@/components/nav";
 import Chat from "@/components/chat";
-import profile from "@/images/profile/profile01.jpg";
 
 export default function Career() {
   return (
@@ -14,7 +13,7 @@ export default function Career() {
         <Chat direction="right">
           <p>어떤 회사에서 근무했었나요?</p>
         </Chat>
-        <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+        <Chat direction="left" profile>
           <p>제가 근무했던 회사를 최근 순으로 말씀드릴게요.</p>
           <br />
           <div>

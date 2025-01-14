@@ -4,11 +4,10 @@ import Frame from "@/components/frame";
 import Container from "@/components/container";
 import Nav from "@/components/nav";
 import Chat from "@/components/chat";
-import profile from "@/images/profile/profile01.jpg";
 
 export function Person() {
   return (
-    <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+    <Chat direction="left" profile>
       <>
         <p>안녕하세요,</p>
         <br />
@@ -31,14 +30,14 @@ export function Person() {
 
 export function Certificate() {
   return (
-    <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+    <Chat direction="left">
       <p>자격증 종류는,</p>
       <br />
       <ul>
         {certificate.map((item) => (
           <li key={item.name}>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <p>{item.name}</p>
+              <p style={{ marginRight: 20 }}>{item.name}</p>
               <p style={{ color: "var(--basic-500)" }}>{item.period}</p>
             </div>
           </li>
@@ -50,7 +49,7 @@ export function Certificate() {
 
 export function Skills() {
   return (
-    <Chat direction="left" talkProfile={{ image: profile, name: "man" }}>
+    <Chat direction="left">
       <p>제가 다루는 프로그램 및 프로그래밍 언어는,</p>
       <br />
       <ul>

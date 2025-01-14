@@ -42,12 +42,14 @@
   width: 48px;
   height: 48px;
   border-radius: 16px;
+  margin-right: 10px;
   overflow: hidden;
 }
 .chat {
   display: flex;
-  gap: 10px;
   width: 100%;
+  opacity: 0;
+  transform: translateY(10%);
 }
 .chat .balloon {
   width: auto;
@@ -71,6 +73,20 @@
   background: var(--primary-600);
 }
 
+.view {
+  animation: view 0.3s ease 0.1s forwards;
+}
+@keyframes view {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* 노트북, 태블렛 환경 */
 @media (max-width: 1240px) {
   .frame {
@@ -90,6 +106,13 @@
   }
   .container {
     height: calc(100% - 145px);
+  }
+
+  .profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+    margin-right: 4px;
   }
   .chat .balloon {
     padding: 10px;

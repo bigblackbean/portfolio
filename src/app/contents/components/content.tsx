@@ -13,7 +13,7 @@ export default function Content({ project }: { project: Project }) {
   // const [fullScreen, setFullScreen] = useState<boolean>(false);
   return (
     <div className={styles.content}>
-      <Chat direction="left" image>
+      <Chat direction="left" profile image>
         <div className={styles.thumbnail}>
           <Image src={project.image.thumbnail} alt={project.image.title} />
         </div>

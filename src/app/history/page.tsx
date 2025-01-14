@@ -17,7 +17,7 @@ const History: FunctionComponent = () => {
             현재 프론트엔드 개발자로 일하려는 이유는 무엇인가요?
           </p>
         </Chat>
-        <Chat direction="left">
+        <Chat direction="left" profile>
           <p>
             처음부터 지금까지 직무를 변경해 오기 까지의 과정입니다.
             <br />
