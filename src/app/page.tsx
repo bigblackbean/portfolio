@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 import MainText from "@/components/main-text";
 import MainContents from "@/components/main-contents";
 import styles from "@/styles/main.module.css";
-import back from "@/images/icons/back.svg";
+import arrow from "@/images/icons/back.svg";
 import Image from "next/image";
 
 export default function Home() {
   const [clicked, setClicked] = useState<boolean>(false);
 
-  const clickCup = () => {
+  const next = () => {
     setClicked(true);
     sessionStorage.setItem("visited", "true");
   };
 
-  const mainBack = () => {
+  const back = () => {
     setClicked(false);
-    sessionStorage.removeItem("visited");
+    sessionStorage.setItem("visited", "false");
   };
 
   useEffect(() => {
@@ -28,24 +28,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ height: "100%" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          width: "100%",
-          height: "100%",
-        }}
-      >
-        <MainText clicked={clicked} />
-        <MainContents clicked={clicked} clickCup={clickCup} />
+    <div className={styles.main}>
+      <div className={styles["main-container"]}>
+        <div className={styles["main-block"]}>
+          <MainText clicked={clicked} />
+          <MainContents clicked={clicked} next={next} />
+        </div>
       </div>
       {clicked && (
-        <button onClick={mainBack} type="button">
+        <button onClick={back} type="button">
           <div className={styles.back}>
             <div style={{ width: "60%", height: "60%" }}>
-              <Image style={{ width: "100%" }} src={back} alt="back" />
+              <Image style={{ width: "100%" }} src={arrow} alt="back arrow" />
             </div>
           </div>
         </button>

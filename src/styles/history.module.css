@@ -44,6 +44,6 @@
 /* 모바일 환경 */
 @media (max-width: 768px) {
   .block {
-    max-width: 90%;
+    max-width: 100%;
   }
 }

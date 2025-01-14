@@ -5,10 +5,10 @@ import MainNav from "./main-nav";
 
 export default function MainContents({
   clicked,
-  clickCup,
+  next,
 }: {
   clicked: boolean;
-  clickCup: () => void;
+  next: () => void;
 }) {
   return (
     <>
@@ -18,11 +18,7 @@ export default function MainContents({
           <MainNav />
         </>
       ) : (
-        <button
-          style={{ display: "block", width: "auto" }}
-          onClick={clickCup}
-          type="button"
-        >
+        <button className={styles["main-image"]} onClick={next} type="button">
           <div className={styles["main-balloon"]}>
             <span className={styles.arrow} />
             가볍게 한잔하며 대화 나눠보실래요?
@@ -35,7 +31,7 @@ export default function MainContents({
             }}
           >
             <p className={styles["cup-text"]}>click me!</p>
-            <Image src={papercup} alt="paper cup" />
+            <Image className={styles.cup} src={papercup} alt="paper cup" />
           </div>
         </button>
       )}

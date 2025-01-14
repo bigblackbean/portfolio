@@ -1,16 +1,36 @@
+"use client";
+
 import styles from "@/styles/main.module.css";
+import { useEffect, useState } from "react";
+
+const text = ["UIUX DESIGNER", "WEB PUBLISHER", "FE DEVELOPER"];
 
 export default function MainText({ clicked }: { clicked: boolean }) {
+  const [order, setOrder] = useState<number>(2);
+
+  useEffect(() => {
+    const flicker = setInterval(() => {
+      setOrder((prev) => (prev < 3 ? prev + 1 : 0));
+    }, 800);
+
+    return () => {
+      clearInterval(flicker);
+    };
+  }, []);
+
   return (
     <div className={styles["main-text"]}>
       {clicked ? (
-        <p>
-          UIUX DESIGNER
-          <br />
-          WEB PUBLISHER
-          <br />
-          <b className={styles.point}>FE DEVELOPER</b>
-        </p>
+        <div>
+          {text.map((item, index) => (
+            <p
+              key={index}
+              className={`${index === order ? styles.point : ""} ${styles.job}`}
+            >
+              {item}
+            </p>
+          ))}
+        </div>
       ) : (
         <p>
           <b className={styles.point}>대화</b>하고 싶은 동료,
