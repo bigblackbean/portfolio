@@ -20,9 +20,17 @@
   width: 100%;
   border-radius: inherit;
   background: var(--basic-0);
+  overflow: hidden;
 }
 
 .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--basic-200);
+}
+.text {
   flex-shrink: 0;
   font-weight: 700;
   font-size: 16px;
@@ -104,7 +112,11 @@
     padding: 10px;
   }
   .container {
-    height: calc(100% - 145px);
+    height: calc(100% - 135px);
+  }
+
+  .title {
+    padding: 10px 16px;
   }
 
   .profile {

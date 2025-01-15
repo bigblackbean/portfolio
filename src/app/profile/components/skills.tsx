@@ -5,7 +5,7 @@ import Chat from "@/components/chat";
 
 export default function Skills() {
   return (
-    <Chat direction="left">
+    <Chat direction="left" profile>
       <p>제가 다루는 프로그램 및 프로그래밍 언어입니다.</p>
       <br />
       <ul>

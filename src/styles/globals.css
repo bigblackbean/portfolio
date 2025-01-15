@@ -56,6 +56,14 @@ body {
   box-sizing: content-box;
   background: var(--background);
 }
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: var(--basic-200);
+}
 
 @layer utilities {
   .text-balance {

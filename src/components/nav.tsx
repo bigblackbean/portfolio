@@ -4,13 +4,14 @@ import { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
 
 import styles from "@/styles/nav.module.css";
+import NavItem from "./nav-item";
+import Bar from "./bar";
 import user from "/public/images/icons/user.svg";
 import paper from "/public/images/icons/paper.svg";
 import folder from "/public/images/icons/folder.svg";
 import ppt from "/public/images/icons/ppt.svg";
 import film from "/public/images/icons/film.svg";
-import Bar from "./bar";
-import NavItem from "./nav-item";
+import Aside from "./aside";
 
 interface Navigator {
   name: string;
@@ -56,15 +57,18 @@ export default function Nav() {
   const current = usePathname();
 
   return (
-    <div className={styles["nav-frame"]}>
-      <Bar />
-      <ul className={styles.list}>
-        {navList.map((item) => (
-          <li key={item.name}>
-            <NavItem item={item} current={current} />
-          </li>
-        ))}
-      </ul>
+    <div className={`${styles["nav-layout"]} scroll`}>
+      <div className={styles["nav-frame"]}>
+        <Bar />
+        <ul className={styles.list}>
+          {navList.map((item) => (
+            <li key={item.name}>
+              <NavItem item={item} current={current} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Aside type="pc" />
     </div>
   );
 }

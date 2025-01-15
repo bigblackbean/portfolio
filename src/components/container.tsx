@@ -1,4 +1,5 @@
 import styles from "@/styles/frame.module.css";
+import Aside from "./aside";
 
 export default function Container({
   title,
@@ -9,16 +10,11 @@ export default function Container({
 }) {
   return (
     <div className={styles.container}>
-      <h3
-        className={styles.title}
-        style={{
-          padding: "20px 40px",
-          borderBottom: "1px solid var(--basic-200)",
-        }}
-      >
-        {title}
-      </h3>
-      <div className={styles.scroll}>{children}</div>
+      <div className={styles.title}>
+        <h3 className={styles.text}>{title}</h3>
+        <Aside type="mo" />
+      </div>
+      <div className={`${styles.scroll} scroll`}>{children}</div>
     </div>
   );
 }

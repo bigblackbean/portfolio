@@ -3,7 +3,7 @@ import Chat from "@/components/chat";
 
 export default function Certificate() {
   return (
-    <Chat direction="left">
+    <Chat direction="left" profile>
       <p>자격증과 취득일입니다.</p>
       <br />
       <ul>
