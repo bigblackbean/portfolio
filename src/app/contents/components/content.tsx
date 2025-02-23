@@ -9,6 +9,7 @@ import MarkTable from "./mark-table";
 // import expand from "/public/images/icons/expand.svg";
 // import FullImage from "@/components/full-image";
 import Chat from "@/components/chat";
+import SkillBlocks from "./skill-blocks";
 
 export default function Content({ project }: { project: Project }) {
   // const [fullScreen, setFullScreen] = useState<boolean>(false);
@@ -35,10 +36,23 @@ export default function Content({ project }: { project: Project }) {
       </Chat>
       <Chat direction="left">
         <div style={{ marginBottom: 10 }}>
+          <SkillBlocks skills={project.skills} />
+        </div>
+        <div style={{ marginBottom: 10 }}>
           {project.description.map((item, index) => (
             <div key={index}>
-              <p>{item}</p>
-              <br />
+              <p style={{ display: "flex", alignItems: "flex-start" }}>
+                <span
+                  style={{
+                    display: "block",
+                    borderLeft: "4px solid var(--basic-900)",
+                    borderTop: "3px solid transparent",
+                    borderBottom: "4px solid transparent",
+                    margin: "6.5px 4px 0 0",
+                  }}
+                />
+                {item}
+              </p>
             </div>
           ))}
         </div>

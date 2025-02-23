@@ -33,7 +33,7 @@ export default function MainText({ clicked }: { clicked: boolean }) {
         </div>
       ) : (
         <p>
-          <b className={styles.point}>대화</b>하고 싶은 동료,
+          <b className={styles.point}></b>협업을 디자인하는,
           <br />
           프론트엔드 개발자
           <br />

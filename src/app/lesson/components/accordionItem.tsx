@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { LessonData } from "../utils";
+import { LessonData } from "../variants";
 import Chat from "@/components/chat";
 import arrow from "/public/images/icons/back-black.svg";
 import styles from "@/styles/lesson.module.css";

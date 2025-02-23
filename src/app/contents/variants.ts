@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image";
 
+import { Skill } from "../variants";
+
 import sofitWeb from "/public/images/contents/project-01-sofitweb.jpg";
 import sofitSeller from "/public/images/contents/project-02-sofitseller.jpg";
 import sofitAdmin from "/public/images/contents/project-03-sofitadmin.jpg";
@@ -9,6 +11,15 @@ import inconKcity from "/public/images/contents/project-06-inconkcity.jpg";
 import inconKiapi from "/public/images/contents/project-07-inconkiapi.jpg";
 import inconGyeongju from "/public/images/contents/project-08-incongyeongju.jpg";
 
+import figma from "/public/images/logos/Figma.svg";
+import react from "/public/images/logos/React.svg";
+import typescript from "/public/images/logos/Typescript.svg";
+import javascript from "/public/images/logos/Javascript.svg";
+import html from "/public/images/logos/HTML5.svg";
+import css from "/public/images/logos/CSS3.svg";
+import xd from "/public/images/logos/XD.svg";
+import restapi from "/public/images/logos/RestAPI.svg";
+
 export interface Role {
   id: number;
   header: string;
@@ -17,6 +28,7 @@ export interface Role {
 
 export interface Project {
   id: number;
+  skills: Skill[];
   image: {
     title: string;
     sub: string;
@@ -32,15 +44,26 @@ export const projects: Project[] = [
   {
     id: 8,
     image: {
-      title: "쏘핏 웹앱 서비스",
-      sub: "여성 스포츠웨어/언더웨어 쇼핑 플랫폼",
+      title: "쏘핏 플랫폼 웹앱 서비스",
+      sub: "스포츠웨어/언더웨어 쇼핑 플랫폼",
       thumbnail: sofitWeb,
       url: "https://web.sofit.kr",
     },
+    skills: [
+      { name: "React", image: react },
+      { name: "Typescript", image: typescript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Rest API", image: restapi },
+      { name: "Figma", image: figma },
+    ],
     description: [
-      "여성 위주의 스포츠웨어와 언더웨어 브랜드를 한 눈에 볼 수 있는 쇼핑 플랫폼 서비스입니다.",
-      "다양한 콘텐츠와 상품 구매까지 이어지는 서비스 경험을 제공합니다.",
-      "플레이스토어 및 앱스토어에서 다운받을 수 있습니다.",
+      "앱 내부 전체 웹뷰로 페이지 제작",
+      "메인/검색/장바구니/결제/콘텐츠 등 각종 페이지 구현",
+      "인기순위 실시간 불러오기 기능 구현",
+      "상품목록 무한 스크롤 기능 구현",
+      "고객 맞춤 사이즈 상품 추천 기능 구현",
+      "전체 페이지 디자인 제작",
     ],
     roles: [
       { id: 0, header: "기획", score: 3 },
@@ -52,15 +75,26 @@ export const projects: Project[] = [
   {
     id: 7,
     image: {
-      title: "쏘핏 셀러 서비스",
+      title: "쏘핏 플랫폼 판매자 어드민",
       sub: "쏘핏 플랫폼 판매자 어드민 웹 서비스",
       thumbnail: sofitSeller,
       // url: "https://seller.sofit.kr",
       notice: "입점 판매자만 확인 가능한 서비스입니다.",
     },
+    skills: [
+      { name: "React", image: react },
+      { name: "Typescript", image: typescript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Rest API", image: restapi },
+      { name: "Figma", image: figma },
+    ],
     description: [
-      "쏘핏 플랫폼에 입점한 판매자가 상품 등록 및 관리, 주문에 대한 처리 및 관리를 제공하는 서비스입니다.",
-      "PC환경을 기준으로 제작되었습니다.",
+      "주문목록 엑셀 Import 기능 구현",
+      "주문목록 엑셀 Export 기능 구현",
+      "상품 할인 가격 계산 기능 구현",
+      "상품 옵션 N개 설정 / 옵션 값에 따른 재고 저장 기능 구현",
+      "관리 상품 내 묶음 배송 기능 구현",
     ],
     roles: [
       { id: 0, header: "기획", score: 2 },
@@ -72,15 +106,29 @@ export const projects: Project[] = [
   {
     id: 6,
     image: {
-      title: "쏘핏 어드민",
+      title: "쏘핏 플랫폼 어드민",
       sub: "쏘핏 사내 관리자 웹 서비스",
       thumbnail: sofitAdmin,
       // url: "https://admin.sofit.kr",
       notice: "내부 직원만 접근 가능한 서비스입니다.",
     },
+    skills: [
+      { name: "React", image: react },
+      { name: "Typescript", image: typescript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Rest API", image: restapi },
+      { name: "Figma", image: figma },
+    ],
     description: [
-      "쏘핏 플랫폼 혹은 관련 서비스를 관리하는 내부 직원 전용 서비스입니다.",
-      "콘텐츠 등록 및 관리, 이벤트 관리, 매출 확인, 판매자 및 고객 관리 등을 진행할 수 있는 서비스입니다.",
+      "모든 페이지 내용 기획 및 API 형태에 대해 서버개발자에게 선 제안하며 주도적 진행",
+      "기획전 에디터: 시간 제한으로 페이지 열고 닫힘",
+      "기획전 에디터: 스톱워치 기능으로 판매 시간 알림",
+      "기획전 에디터: 설정한 코드로 링크 공유 기능 (고객들에게 전달)",
+      "기획전 에디터: 다양한 형태의 콘텐츠 삽입 기능 (이미지, 텍스트, 영상)",
+      "주문 관리: 검색 조건을 지정 혹은 제외한 조회 기능",
+      "주문 관리: 정산여부 처리 기능",
+      "기간 할인: 엑셀 업로드 중 내부 데이터 검토 (할인율 확인, 데이터 길이 및 오타 확인)",
     ],
     roles: [
       { id: 0, header: "기획", score: 5 },
@@ -97,9 +145,18 @@ export const projects: Project[] = [
       thumbnail: sofitHome,
       url: "https://sofit.kr",
     },
+    skills: [
+      { name: "Javascript", image: javascript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Rest API", image: restapi },
+      { name: "Figma", image: figma },
+    ],
     description: [
-      "쏘핏 서비스에 대한 소개가 담긴 랜딩페이지 형식의 공식 홈페이지입니다.",
-      "쏘핏 플랫폼 서비스를 이용하는 고객과 입점하는 판매자를 위한 페이지로 나뉘어서 안내합니다.",
+      "SSR방식의 홈페이지 제작",
+      "VanillaScript 사용한 동작 구현 및 API 통신",
+      "인스타그램 게시글 데이터 불러오기 구현",
+      "SEO checker 100점 도달",
     ],
     roles: [
       { id: 0, header: "기획", score: 4 },
@@ -117,10 +174,16 @@ export const projects: Project[] = [
       url: "https://url.kr/4ftanx",
       notice: "시설 내부 시스템입니다. 관련 기사 링크로 대체합니다.",
     },
+    skills: [
+      { name: "Javascript", image: javascript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Adobe XD", image: xd },
+    ],
     description: [
-      "자율주행 차량을 추적하는 관제 시스템입니다.",
-      "각종 돌발상황을 제어하고 차량이 이벤트에 대처하는 기능을 테스트합니다.",
-      "모니터 12대를 이어붙인 스크린을 통해 확인하는 특징이 있습니다.",
+      "자율주행 차량을 추적하는 관제 시스템",
+      "특수한 형태의 프레임 SVG로 제작",
+      "대형 스크린에 맞는 전체 반응형으로 비율 단위 구현",
     ],
     roles: [
       { id: 0, header: "기획", score: 0 },
@@ -136,9 +199,15 @@ export const projects: Project[] = [
       thumbnail: inconVes,
       notice: "시설 내부 시스템입니다.",
     },
+    skills: [
+      { name: "Javascript", image: javascript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Adobe XD", image: xd },
+    ],
     description: [
-      "경찰 공무원이 사건발생시 현장 CCTV를 확인하기 위한 시스템입니다.",
-      "기존 PC환경을 통해 제공되던 시스템을 모바일에 웹앱 형태로 추가 제공하기 위해 작업한 프로젝트입니다.",
+      "모바일 웹뷰 UI 설계",
+      "PC형태의 시스템을 모바일 형태로 재설계",
     ],
     roles: [
       { id: 0, header: "기획", score: 2 },
@@ -154,9 +223,15 @@ export const projects: Project[] = [
       thumbnail: inconKiapi,
       notice: "시설 내부 시스템입니다.",
     },
+    skills: [
+      { name: "Javascript", image: javascript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Adobe XD", image: xd },
+    ],
     description: [
-      "자율주행 차량을 추적하는 관제 시스템입니다.",
-      "각종 돌발상황을 제어하고 차량이 이벤트에 대처하는 기능을 테스트합니다.",
+      "화성 시스템의 디자인을 보고 들어온 의뢰",
+      "전체 반응형 비율 단위로 제작",
     ],
     roles: [
       { id: 0, header: "기획", score: 0 },
@@ -172,10 +247,15 @@ export const projects: Project[] = [
       thumbnail: inconGyeongju,
       notice: "시설 내부 시스템입니다.",
     },
+    skills: [
+      { name: "Javascript", image: javascript },
+      { name: "HTML", image: html },
+      { name: "CSS", image: css },
+      { name: "Adobe XD", image: xd },
+    ],
     description: [
-      "경주시청에서 경주 내의 문화재의 관제, 수문의 상태 및 조작을 위한 시스템입니다.",
-      "문화재에 비상상황 발생시 빠른 대응을 위해 관리합니다.",
-      "물높이를 확인하여 수문 개방 및 패쇄를 컨트롤할 수 있는 기능이 있습니다.",
+      "수문제어 열고 닫힘에 애니메이션 구현",
+      "내부 레이어 팝업 형태의 창 디자인",
     ],
     roles: [
       { id: 0, header: "기획", score: 1 },

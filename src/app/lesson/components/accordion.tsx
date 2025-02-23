@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { lessons } from "../utils";
+import { lessons } from "../variants";
 import styles from "@/styles/lesson.module.css";
 import AccordionItem from "./accordionItem";
 

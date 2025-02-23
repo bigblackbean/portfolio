@@ -1,5 +1,3 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
 import figma from "/public/images/logos/Figma.svg";
 import react from "/public/images/logos/React.svg";
 import typescript from "/public/images/logos/Typescript.svg";
@@ -12,15 +10,12 @@ import indesign from "/public/images/logos/Indesign.svg";
 import xd from "/public/images/logos/XD.svg";
 import notion from "/public/images/logos/Notion.svg";
 import slack from "/public/images/logos/Slack.svg";
+import { Skill } from "../variants";
 
 export interface Intro {
   id: number;
   question: string;
   answer: string;
-}
-export interface Skill {
-  name: string;
-  image: StaticImport;
 }
 
 export interface Certi {
@@ -38,20 +33,13 @@ export const person: Intro[] = [
 ];
 
 export const certificate: Certi[] = [
-  { name: "KPC 그래픽 전문강사", period: "2021/10" },
-  { name: "GTQid 1급", period: "2021/10" },
-  { name: "GTQi 1급", period: "2021/07" },
-  { name: "GTQ 1급", period: "2018/06" },
   { name: "웹디자인기능사", period: "2020/06" },
+  { name: "GTQ 1급", period: "2018/06" },
   { name: "컴퓨터활용능력 2급", period: "2016/10" },
   { name: "운전면허 1종 보통", period: "2011/10" },
 ];
 
 export const skills: Skill[] = [
-  {
-    name: "Figma",
-    image: figma,
-  },
   {
     name: "React",
     image: react,
@@ -71,6 +59,10 @@ export const skills: Skill[] = [
   {
     name: "CSS3",
     image: css,
+  },
+  {
+    name: "Figma",
+    image: figma,
   },
   {
     name: "Photoshop",

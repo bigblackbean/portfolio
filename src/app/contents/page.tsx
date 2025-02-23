@@ -13,6 +13,9 @@ export default function Contents() {
         <Chat direction="right">
           <p>참여한 프로젝트에 대해서 알려주세요.</p>
         </Chat>
+        <Chat direction="left" profile>
+          <p>실제 운영되는 서비스에 참여한 내역입니다.</p>
+        </Chat>
         {projects.map((project) => (
           <Content key={project.id} project={project} />
         ))}
