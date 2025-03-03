@@ -15,8 +15,8 @@ export const careers: Career[] = [
     encompany: "SOFIT",
     field: "스포츠웨어/언더웨어 쇼핑 플랫폼",
     color: "#2386fe",
-    position: "UIUX디자이너/웹퍼블리셔/프론트엔지니어",
-    role: "앱,웹 화면 기획, 콘텐츠 및 화면 디자인, 웹 서비스 제작 및 관리",
+    position: "프론트엔드개발자/웹퍼블리셔/UI&UX디자이너",
+    role: "웹서비스 개발 및 유지보수, 사용자 화면 디자인 및 기획",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const careers: Career[] = [
     field: "컴퓨터 학원",
     color: "#dd2125",
     position: "강사",
-    role: "광고콘텐츠, 웹디자인, 웹퍼블리싱, 이모티콘,피그마 강의",
+    role: "웹디자이너/웹퍼블리셔 양성 과정, 그래픽 디자인 및 자격증 강의",
   },
   {
     id: 1,
@@ -43,6 +43,6 @@ export const careers: Career[] = [
     field: "이커머스",
     color: "#e95506",
     position: "콘텐츠디자이너",
-    role: "배너, 썸네일, 상세페이지, 프로모션페이지 제작",
+    role: "배너, 썸네일, 상세페이지, 프로모션페이지 디자인",
   },
 ];

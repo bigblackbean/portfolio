@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Skill, logoColor } from "@/app/variants";
+import { Skill, logoColor } from "@/variants/logo";
 
 export default function SkillBlocks({ skills }: { skills: Skill[] }) {
   return (

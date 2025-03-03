@@ -10,7 +10,7 @@ import indesign from "/public/images/logos/Indesign.svg";
 import xd from "/public/images/logos/XD.svg";
 import notion from "/public/images/logos/Notion.svg";
 import slack from "/public/images/logos/Slack.svg";
-import { Skill } from "../variants";
+import { Skill } from "../../variants/logo";
 
 export interface Intro {
   id: number;

@@ -1,14 +1,8 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import styles from "@/styles/nav.module.css";
-
-interface Navigator {
-  name: string;
-  url: string;
-  icon: StaticImageData;
-  description: string;
-}
+import { Navigator } from "@/variants/menu";
 
 export default function NavItem({
   item,

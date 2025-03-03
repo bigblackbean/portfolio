@@ -26,6 +26,12 @@ export default function Career() {
             </ul>
           </div>
         </Chat>
+        <Chat direction="left">
+          <p>프론트엔드 개발자 경력 3년</p>
+          <p>웹퍼블리셔 경력 4년</p>
+          <p>디자이너 경력 6년</p>
+          <p>입니다.</p>
+        </Chat>
       </Container>
     </Frame>
   );

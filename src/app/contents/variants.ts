@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import { Skill } from "../variants";
+import { Skill } from "../../variants/logo";
 
 import sofitWeb from "/public/images/contents/project-01-sofitweb.jpg";
 import sofitSeller from "/public/images/contents/project-02-sofitseller.jpg";
