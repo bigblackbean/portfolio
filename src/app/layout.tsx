@@ -6,7 +6,6 @@ import "../styles/typography.css";
 
 const suiteSans = localFont({
   src: "../../public/fonts/SUITE-Variable.woff2",
-  // variable: "--font-geist-sans",
   weight: "100 900",
 });
 
