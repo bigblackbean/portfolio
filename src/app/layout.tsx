@@ -11,11 +11,11 @@ const suiteSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "이강희의 포트폴리오",
-  description: "프론트엔드 웹 개발자 이강희 포트폴리오",
+  title: "모바일 청첩장",
+  description: "강희와 다솜이의 결혼식에 초대합니다.",
   openGraph: {
     title: "이강희의 포트폴리오",
-    description: "프론트엔드 웹 개발자 이강희 포트폴리오",
+    description: "강희와 다솜이의 결혼식에 초대합니다.",
     locale: "ko_KR",
   },
   icons: {
