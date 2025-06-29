@@ -4,7 +4,7 @@ import couple from "/public/images/main/Main-01.png";
 
 export default function Main() {
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrap} style={{ padding: "0 0 14vw" }}>
       <div className={styles.main}>
         <h2 className={`${styles.title} walter-turncoat-regular`}>
           <span className={styles.line1}>YOU ARE INVITED TO</span>
@@ -15,7 +15,7 @@ export default function Main() {
         </div>
         <div className={styles.footer}>
           <p className={styles.line1}>2025.09.13 SAT 02:00PM</p>
-          <p className={styles.line2}>at. VENUEVIAN WEDDING</p>
+          <p className={styles.line2}>at. VENUEVIAN 2층 에메랄드홀</p>
         </div>
       </div>
     </div>
