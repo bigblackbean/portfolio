@@ -5,8 +5,8 @@ import localFont from "next/font/local";
 import "../styles/globals.css";
 import "../styles/typography.css";
 
-const suiteSans = localFont({
-  src: "../../public/fonts/SUITE-Variable.woff2",
+const suitSans = localFont({
+  src: "../../public/fonts/SUIT-Medium.woff2",
   weight: "100 900",
 });
 
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${suiteSans} antialiased`}>
+      <body className={`${suitSans} antialiased`}>
         <main style={{ width: "100%", height: "100%" }}>{children}</main>
       </body>
     </html>

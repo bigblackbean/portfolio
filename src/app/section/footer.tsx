@@ -5,24 +5,55 @@ import kakao from "/public/images/footer/kakaotalk.svg";
 import share from "/public/images/footer/share.svg";
 
 export default function Footer() {
+  const shareContent = async ({
+    title,
+    text,
+    url,
+  }: {
+    title: string;
+    text?: string;
+    url: string;
+  }) => {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, text, url });
+        console.log("공유 성공");
+      } catch (err) {
+        console.error("공유 실패", err);
+      }
+    } else {
+      alert("현재 브라우저에서는 공유 기능이 지원되지 않습니다.");
+    }
+  };
+
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          gap: "3vw",
-          padding: "0 4vw",
-        }}
-      >
-        <div style={{ width: "10vw", height: "10vw" }}>
+    <div className="bg-[var(--bg-pink)] relative">
+      <div className="flex justify-end gap-[3vw] px-[4vw] relative top-[6vw]">
+        <button style={{ width: "10vw", height: "10vw" }} type="button">
           <Image src={kakao} alt="kakao" />
-        </div>
-        <div style={{ width: "10vw", height: "10vw" }}>
+        </button>
+        <button
+          style={{ width: "10vw", height: "10vw" }}
+          onClick={() =>
+            shareContent({
+              title: "강희&다솜 청첩장",
+              text: "강희와 다솜이의 결혼식에 초대합니다!",
+              url: "https://dasom.kanghee.kr",
+            })
+          }
+          type="button"
+        >
           <Image src={share} alt="share" />
-        </div>
+        </button>
       </div>
-      <p>THANK U</p>
+      <div className="w-full text-center absolute top-[38vw]">
+        <p
+          className="text-[var(--basic-0)] walter-turncoat-regular"
+          style={{ fontSize: "var(--fz-30)" }}
+        >
+          THANK U
+        </p>
+      </div>
       <Image src={bg} alt="background" />
     </div>
   );

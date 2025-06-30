@@ -15,12 +15,21 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [content, setContent] = useState<ReactNode | null>(null);
 
+  const lockScroll = () => {
+    document.body.style.overflow = "hidden";
+  };
+  const unlockScroll = () => {
+    document.body.style.overflow = "";
+  };
+
   const openModal = (content: ReactNode) => {
     setContent(content);
     setIsOpen(true);
+    lockScroll();
   };
 
   const closeModal = () => {
+    unlockScroll();
     setIsOpen(false);
     setContent(null);
   };
@@ -39,6 +48,7 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
             position: "fixed",
             top: 0,
             left: 0,
+            zIndex: 999,
           }}
         >
           <button

@@ -14,17 +14,63 @@
 }
 
 @font-face {
-  font-family: "SUIT";
+  font-family: "SUITE";
   src: url("/fonts/SUITE-Variable.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+@font-face {
+  font-family: "SUIT";
+  src: url("/fonts/SUIT-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SUIT";
+  src: url("/fonts/SUIT-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SUIT";
+  src: url("/fonts/SUIT-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SUIT";
+  src: url("/fonts/SUIT-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uhbee ZZiBA";
+  src: url("/fonts/UhBeeZZIBA-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 .walter-turncoat-regular {
   font-family: "Walter Turncoat";
   font-weight: 400;
+  font-style: normal;
+}
+.suit {
+  font-family: "SUIT";
+  font-weight: 500;
+  font-style: normal;
+}
+.uhbee-zziba {
+  font-family: "Uhbee ZZiBA";
+  font-weight: normal;
   font-style: normal;
 }
 
