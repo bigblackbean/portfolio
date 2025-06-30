@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
 import localFont from "next/font/local";
+import { domain } from "@/constant/domain";
 
 import "../styles/globals.css";
 import "../styles/typography.css";
@@ -19,9 +20,7 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     images: [
       {
-        url: "/images/ogimage.png",
-        width: 1200,
-        height: 630,
+        url: `${domain}/images/ogimage.png`,
         alt: "강희&다솜 청첩장",
       },
     ],

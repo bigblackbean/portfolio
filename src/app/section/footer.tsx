@@ -3,6 +3,7 @@ import Image from "next/image";
 import bg from "/public/images/footer/footer_bg.svg";
 import kakao from "/public/images/footer/kakaotalk.svg";
 import share from "/public/images/footer/share.svg";
+import { domain } from "@/constant/domain";
 
 export default function Footer() {
   const shareContent = async ({
@@ -38,7 +39,7 @@ export default function Footer() {
             shareContent({
               title: "강희&다솜 청첩장",
               text: "강희와 다솜이의 결혼식에 초대합니다!",
-              url: "https://dasom.kanghee.kr",
+              url: domain,
             })
           }
           type="button"
