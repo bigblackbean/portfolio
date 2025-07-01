@@ -7,8 +7,11 @@ import arrow_right from "/public/images/main/right_arrow.svg";
 
 export default function Main() {
   return (
-    <div className={styles.wrap} style={{ padding: "0 0 14vw" }}>
-      <div className={styles.main}>
+    <div
+      className="w-full bg-[var(--basic-900)]"
+      style={{ padding: "0 0 14vw" }}
+    >
+      <div className="font-[var(--basic-0)] overflow-hidden">
         <h2 className={`${styles.title} walter-turncoat-regular`}>
           <span className={styles.line1}>YOU ARE INVITED TO</span>
           <span className={styles.line2}>OUR WEDDING</span>

@@ -1,11 +1,10 @@
-import styles from "@/styles/section.module.css";
 import ourwedding from "/public/images/section03/our_wedding.png";
 import heart from "/public/images/section03/heart.svg";
 import Image from "next/image";
 
 export default function Section03() {
   return (
-    <div className="py-[20vw] bg-[var(--basic-900)]">
+    <div className="py-[20vw] bg-[var(--basic-900)] overflow-hidden">
       <div className="relative rotate-[-7deg] z-10 top-[-2vw]">
         <div className="w-[12vw] absolute left-[12vw] top-[-9vw]">
           <Image src={heart} alt="heart" />

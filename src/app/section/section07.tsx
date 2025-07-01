@@ -11,7 +11,9 @@ export default function Section07() {
       <div className="w-[70vw] absolute top-[-32vw] left-[28vw]">
         <Image src={maptitle} alt="map-title" />
       </div>
-      <div className="h-[68vw] bg-[var(--basic-200)]"></div>
+      <div className="h-[68vw]">
+        <KakaoMap />
+      </div>
       <div className="px-[4vw]">
         <div className="flex justify-between items-center py-[4vw]">
           <div style={{ fontSize: "var(--fz-16)" }}>
@@ -40,7 +42,6 @@ export default function Section07() {
           있습니다.
         </p>
       </div>
-      {/* <KakaoMap /> */}
     </div>
   );
 }

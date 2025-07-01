@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="bg-[var(--bg-pink)] relative">
+    <div className="bg-[var(--bg-pink)] relative overflow-hidden">
       <div className="flex justify-end gap-[3vw] px-[4vw] relative top-[6vw]">
         <button style={{ width: "10vw", height: "10vw" }} type="button">
           <Image src={kakao} alt="kakao" />
@@ -47,7 +47,7 @@ export default function Footer() {
           <Image src={share} alt="share" />
         </button>
       </div>
-      <div className="w-full text-center absolute top-[38vw]">
+      <div className="w-full text-center absolute top-[38vw] z-10">
         <p
           className="text-[var(--basic-0)] walter-turncoat-regular"
           style={{ fontSize: "var(--fz-30)" }}
@@ -55,7 +55,9 @@ export default function Footer() {
           THANK U
         </p>
       </div>
-      <Image src={bg} alt="background" />
+      <div className="relative w-[104vw] left-[-2vw] top-[1vw]">
+        <Image src={bg} alt="background" />
+      </div>
     </div>
   );
 }

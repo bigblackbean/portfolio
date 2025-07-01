@@ -87,7 +87,9 @@ export default function Section04() {
         </p>
 
         <div className="w-[76%] relative">
-          <Image src={groombg} alt="groom bg" />
+          <div className="relative left-[-2vw]">
+            <Image src={groombg} alt="groom bg" />
+          </div>
           <div className="text-[var(--basic-0)] absolute top-[50vw] left-[10vw] text-center">
             <p style={{ fontSize: "var(--fz-16)" }}>GROOM</p>
             <p style={{ fontSize: "var(--fz-16)", fontWeight: 600 }}>
@@ -107,7 +109,7 @@ export default function Section04() {
         <div className="w-[12vw] absolute top-[180vw] left-[54vw] rotate-90">
           <Image src={heart} alt="heart" />
         </div>
-        <div className="w-[102vw] mt-[40vw] relative">
+        <div className="w-[104vw] mt-[38vw] relative">
           <Image src={bridebg} alt="bride bg" />
           <div className="text-[var(--basic-0)] absolute top-[17vw] left-[64vw] text-center">
             <p style={{ fontSize: "var(--fz-16)" }}>BRIDE</p>

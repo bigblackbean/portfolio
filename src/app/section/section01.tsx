@@ -1,4 +1,3 @@
-import styles from "@/styles/section.module.css";
 import bg from "/public/images/section01/background.svg";
 import circle from "/public/images/section01/circle.svg";
 import twinkle from "/public/images/section01/twinkle.svg";
@@ -6,14 +5,10 @@ import Image from "next/image";
 
 export default function Section01() {
   return (
-    <div
-      style={{
-        padding: "10vw 0",
-        background: "var(--basic-900)",
-        position: "relative",
-      }}
-    >
-      <Image src={bg} alt="background" />
+    <div className="py-[10vw] bg-[var(--basic-900)] relative overflow-hidden">
+      <div className="w-[108vw] relative left-[-4vw]">
+        <Image src={bg} alt="background" />
+      </div>
       <div
         style={{
           width: "100%",
