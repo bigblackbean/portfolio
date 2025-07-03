@@ -1,4 +1,3 @@
-import styles from "@/styles/section.module.css";
 import Image from "next/image";
 import bg from "/public/images/footer/footer_bg.svg";
 import kakao from "/public/images/footer/kakaotalk.svg";
@@ -18,7 +17,6 @@ export default function Footer() {
     if (navigator.share) {
       try {
         await navigator.share({ title, text, url });
-        console.log("공유 성공");
       } catch (err) {
         console.error("공유 실패", err);
       }
@@ -30,9 +28,9 @@ export default function Footer() {
   return (
     <div className="bg-[var(--bg-pink)] relative overflow-hidden">
       <div className="flex justify-end gap-[3vw] px-[4vw] relative top-[6vw]">
-        <button style={{ width: "10vw", height: "10vw" }} type="button">
+        {/* <button style={{ width: "10vw", height: "10vw" }} type="button">
           <Image src={kakao} alt="kakao" />
-        </button>
+        </button> */}
         <button
           style={{ width: "10vw", height: "10vw" }}
           onClick={() =>

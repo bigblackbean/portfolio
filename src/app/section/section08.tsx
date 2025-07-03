@@ -2,6 +2,7 @@ import styles from "@/styles/section.module.css";
 import Image from "next/image";
 import photo from "/public/images/section08/photo.png";
 import { copyToClipboard } from "@/constant/copy";
+import { useToast } from "@/context/ToastContext";
 
 const AccountButton = ({
   account,
@@ -12,6 +13,8 @@ const AccountButton = ({
   name: string;
   bg: string;
 }) => {
+  const { showToast } = useToast();
+
   return (
     <div className="">
       <p style={{ fontSize: "var(--fz-14)" }}>
@@ -25,7 +28,11 @@ const AccountButton = ({
           fontWeight: 600,
           backgroundColor: bg,
         }}
-        onClick={() => copyToClipboard(account)}
+        onClick={() => {
+          copyToClipboard(account)
+            .then(() => showToast("계좌번호를 복사했어요!"))
+            .catch(() => showToast("어라..? 복사가 안됐어요!"));
+        }}
         type="button"
       >{`${name}에게 마음 전달하기`}</button>
     </div>

@@ -1,18 +1,19 @@
-import Image from "next/image";
-import maptitle from "/public/images/section07/map_title.svg";
-import KakaoMap from "@/components/kakaomap";
+import GoogleMap from "@/components/googlemap";
+// import KakaoMap from "@/components/kakaomap";
+import NaverMap from "@/components/navermap";
 import { copyToClipboard } from "@/constant/copy";
+import { useToast } from "@/context/ToastContext";
 
 export default function Section07() {
+  const { showToast } = useToast();
   const address = "서울 영등포구 신길로 89 베뉴비안 웨딩";
 
   return (
-    <div className="bg-[var(--bg-pink)] relative py-[19vw]">
-      <div className="w-[70vw] absolute top-[-32vw] left-[28vw]">
-        <Image src={maptitle} alt="map-title" />
-      </div>
+    <div className="bg-[var(--bg-pink)] relative py-[19vw] overflow-x-hidden">
       <div className="h-[68vw]">
-        <KakaoMap />
+        {/* <KakaoMap /> */}
+        <GoogleMap />
+        <NaverMap />
       </div>
       <div className="px-[4vw]">
         <div className="flex justify-between items-center py-[4vw]">
@@ -22,7 +23,11 @@ export default function Section07() {
           </div>
           <div>
             <button
-              onClick={() => copyToClipboard(address)}
+              onClick={() =>
+                copyToClipboard(address)
+                  .then(() => showToast("주소를 복사했어요!"))
+                  .catch(() => showToast("어라..? 복사가 안됐어요!"))
+              }
               className="py-[2vw] px-[4vw] bg-[var(--basic-800)] text-[var(--basic-0)] rounded-[4vw]"
               style={{ fontSize: "var(--fz-16)", fontWeight: 700 }}
               type="button"

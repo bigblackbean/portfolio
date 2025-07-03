@@ -4,7 +4,7 @@ import calendar from "/public/images/section06/calendar.svg";
 
 export default function Section06() {
   return (
-    <div className="pb-[20vw] bg-[var(--basic-900)]">
+    <div className="pb-[20vw] bg-[var(--basic-900)] overflow-hidden">
       <Image src={calendar} alt="calendar" />
     </div>
   );
