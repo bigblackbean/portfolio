@@ -1,4 +1,3 @@
-import styles from "@/styles/section.module.css";
 import Image from "next/image";
 import photo from "/public/images/section08/photo.png";
 import { copyToClipboard } from "@/constant/copy";

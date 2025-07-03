@@ -1,5 +1,3 @@
-import GoogleMap from "@/components/googlemap";
-// import KakaoMap from "@/components/kakaomap";
 import NaverMap from "@/components/navermap";
 import { copyToClipboard } from "@/constant/copy";
 import { useToast } from "@/context/ToastContext";
@@ -11,8 +9,6 @@ export default function Section07() {
   return (
     <div className="bg-[var(--bg-pink)] relative py-[19vw] overflow-x-hidden">
       <div className="h-[68vw]">
-        {/* <KakaoMap /> */}
-        <GoogleMap />
         <NaverMap />
       </div>
       <div className="px-[4vw]">

@@ -8,13 +8,15 @@ export default function NaverMap() {
   const loaded = useNaverLoader();
 
   useEffect(() => {
-    const Lat = 37.484268420359186;
-    const Lng = 126.88822307803;
+    const Lat = 37.500704;
+    const Lng = 126.908762;
     if (!loaded || !mapRef.current) return;
 
     const map = new window.naver.maps.Map(mapRef.current, {
-      center: new window.naver.maps.LatLng(Lat, Lng), // 서울
-      zoom: 10,
+      center: new window.naver.maps.LatLng(Lat, Lng),
+      position: new window.naver.maps.LatLng(Lat, Lng),
+      zoom: 17,
+      zoomControl: true,
     });
 
     // 마커 추가 예시
