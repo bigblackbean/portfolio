@@ -15,8 +15,8 @@ const AccountButton = ({
   const { showToast } = useToast();
 
   return (
-    <div className="">
-      <p style={{ fontSize: "var(--fz-14)" }}>
+    <div>
+      <p className="mb-[2vw]" style={{ fontSize: "var(--fz-14)" }}>
         <span style={{ fontWeight: 600 }}>신한은행&nbsp;</span>
         {account}
       </p>
