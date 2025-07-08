@@ -17,7 +17,7 @@ export default function Main() {
           <span className={styles.line2}>OUR WEDDING</span>
         </h2>
         <div className={styles.couple} style={{ position: "relative" }}>
-          <Image src={couple} alt="couple" />
+          <Image src={couple} alt="couple" className="gelatine-small" />
           <div
             style={{
               width: "14vw",

@@ -1,16 +1,19 @@
-import styles from "@/styles/section.module.css";
+import Image from "next/image";
 import dasom from "/public/images/section04/dasom.png";
 import kanghee from "/public/images/section04/kanghee.png";
 import bridebg from "/public/images/section04/bride_bg.svg";
 import groombg from "/public/images/section04/groom_bg.svg";
 import twinkle from "/public/images/section04/twinkle.svg";
 import heart from "/public/images/section04/heart.svg";
-import Image from "next/image";
+import leftarrow from "/public/images/icons/left-arrow.svg";
+import rightarrow from "/public/images/icons/right-arrow.svg";
 
 import { useModal } from "@/context/ModalContext";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import mainphoto from "/public/images/section05/main_photo.png";
 import gallery01 from "/public/images/section05/gallery_01.png";
@@ -46,23 +49,39 @@ export default function Section04() {
 
   const openGallery = (index: number) => {
     openModal(
-      <div style={{ width: "100%", padding: 16 }}>
-        <Swiper
-          modules={[Navigation]}
-          navigation
-          pagination={{ clickable: true }}
-          loop
-          initialSlide={index}
-        >
-          {galleries.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div style={{ display: "block", width: "100%" }}>
-                <Image src={item.img} alt={item.alt} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <>
+        <style>
+          {`
+          .swiper-pagination-progressbar-fill {
+            background: #CD6485 !important;
+          }
+        `}
+        </style>
+        <div style={{ width: "100%", padding: 16 }}>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation={{ prevEl: ".prevEl", nextEl: ".nextEl" }}
+            pagination={{ clickable: true, type: "progressbar", el: ".pagi" }}
+            loop
+            initialSlide={index}
+          >
+            {galleries.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div style={{ display: "block", width: "100%" }}>
+                  <Image src={item.img} alt={item.alt} />
+                </div>
+              </SwiperSlide>
+            ))}
+            <div className="prevEl w-8 absolute z-20 top-1/2 -translate-y-1/2 left-2 opacity-60 bg-black rounded-full p-1">
+              <Image src={leftarrow} alt="arrow" />
+            </div>
+            <div className="nextEl w-8 absolute z-20 top-1/2 -translate-y-1/2 right-2 opacity-60 bg-black rounded-full p-1">
+              <Image src={rightarrow} alt="arrow" />
+            </div>
+            <div className="pagi z-20 !top-full -translate-y-full" />
+          </Swiper>
+        </div>
+      </>
     );
   };
 
@@ -98,16 +117,16 @@ export default function Section04() {
           </div>
         </div>
         <div className="w-full absolute top-[80vw]">
-          <Image src={kanghee} alt="kanghee" />
+          <Image src={kanghee} alt="kanghee" className="fade-in" />
         </div>
         <div className="w-[28vw] absolute top-[58vw] left-[62vw]">
-          <Image src={twinkle} alt="twinkle" />
+          <Image src={twinkle} alt="twinkle" className="gelatine" />
         </div>
         <div className="w-full absolute top-[148vw]">
           <Image src={dasom} alt="dasom" />
         </div>
         <div className="w-[12vw] absolute top-[180vw] left-[54vw] rotate-90">
-          <Image src={heart} alt="heart" />
+          <Image src={heart} alt="heart" className="gelatine" />
         </div>
         <div className="w-[104vw] mt-[38vw] relative">
           <Image src={bridebg} alt="bride bg" />
