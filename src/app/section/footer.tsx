@@ -22,12 +22,12 @@ export default function Footer() {
       try {
         await navigator.share({ title, text, url });
       } catch (err) {
-        copyToClipboard("https://dasom.kanghee.kr")
-          .then(() => showToast("링크를 복사했어요!"))
-          .catch(() => showToast("어라..? 복사가 안됐어요!"));
+        console.error(err);
       }
     } else {
-      showToast("지금 사용하시는 환경에서 공유 기능이 지원되지 않습니다.");
+      copyToClipboard("https://dasom.kanghee.kr")
+        .then(() => showToast("링크를 복사했어요!"))
+        .catch(() => showToast("어라..? 복사가 안됐어요!"));
     }
   };
 
