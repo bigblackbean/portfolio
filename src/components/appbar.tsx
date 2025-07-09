@@ -16,13 +16,19 @@ const nav = [
 type NavKey = (typeof nav)[number]["key"];
 
 export default function Appbar({
+  isScrollingDown,
   onNavigate,
 }: {
+  isScrollingDown: boolean;
   onNavigate: Record<NavKey, () => void>;
 }) {
   return (
     <div className="fixed bottom-0 left-0 w-full z-50">
-      <ul className="flex w-full bg-[#00000060]">
+      <ul
+        className={`flex w-full bg-[#00000060] ${
+          isScrollingDown ? "pb-[6vw]" : "pb-[0]"
+        }`}
+      >
         {nav.map((item) => (
           <li key={item.id} className="w-1/5 shrink-0">
             <button

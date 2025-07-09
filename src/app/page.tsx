@@ -13,7 +13,7 @@ import Section08 from "./section/section08";
 import Footer from "./section/footer";
 import maptitle from "/public/images/section07/map_title.svg";
 import Appbar from "@/components/appbar";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Wrap() {
   const mainRef = useRef<HTMLDivElement>(null);
@@ -25,6 +25,29 @@ function Wrap() {
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const lastScrollTop = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.scrollY;
+
+      if (currentScrollTop > lastScrollTop.current) {
+        // 아래로 스크롤
+        setIsScrollingDown(true);
+      } else {
+        // 위로 스크롤
+        setIsScrollingDown(false);
+      }
+
+      lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div>
@@ -59,6 +82,7 @@ function Wrap() {
           map: () => scrollTo(mapRef),
           message: () => scrollTo(messageRef),
         }}
+        isScrollingDown={isScrollingDown}
       />
     </div>
   );
