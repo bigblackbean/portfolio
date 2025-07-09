@@ -12,23 +12,54 @@ import Section07 from "./section/section07";
 import Section08 from "./section/section08";
 import Footer from "./section/footer";
 import maptitle from "/public/images/section07/map_title.svg";
+import Appbar from "@/components/appbar";
+import { useRef } from "react";
 
 function Wrap() {
+  const mainRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const calendarRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<HTMLDivElement>(null);
+  const messageRef = useRef<HTMLDivElement>(null);
+
+  const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
-      <Main />
+      <div ref={mainRef}>
+        <Main />
+      </div>
       <Section01 />
       <Section03 />
-      <Section04 />
-      <Section06 />
+      <div ref={galleryRef} className="scroll-mt-[-240vw]">
+        <Section04 />
+      </div>
+      <div ref={calendarRef} className="scroll-mt-[10vw]">
+        <Section06 />
+      </div>
       <div className="relative z-10">
         <div className="w-[68vw] absolute top-[-32vw] left-[26vw]">
           <Image src={maptitle} alt="map-title" />
         </div>
       </div>
-      <Section07 />
-      <Section08 />
+      <div ref={mapRef}>
+        <Section07 />
+      </div>
+      <div ref={messageRef}>
+        <Section08 />
+      </div>
       <Footer />
+      <Appbar
+        onNavigate={{
+          main: () => scrollTo(mainRef),
+          gallery: () => scrollTo(galleryRef),
+          calendar: () => scrollTo(calendarRef),
+          map: () => scrollTo(mapRef),
+          message: () => scrollTo(messageRef),
+        }}
+      />
     </div>
   );
 }

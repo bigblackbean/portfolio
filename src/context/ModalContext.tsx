@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { createContext, useContext, useState, ReactNode } from "react";
+import close from "/public/images/icons/close-white.svg";
 
 interface ModalContextType {
   isOpen: boolean;
@@ -65,6 +67,22 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
             type="button"
           />
           <div style={{ width: "100%", position: "relative", zIndex: 2 }}>
+            <button
+              style={{
+                width: "8vw",
+                height: "8vw",
+                position: "absolute",
+                top: "4vw",
+                right: "4vw",
+                zIndex: 100,
+                padding: "1vw",
+                background: "rgba(0,0,0,0.6)",
+              }}
+              onClick={closeModal}
+              type="button"
+            >
+              <Image style={{ opacity: 0.8 }} src={close} alt="close" />
+            </button>
             {content}
           </div>
         </div>

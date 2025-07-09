@@ -57,7 +57,7 @@ export default function Section04() {
           }
         `}
         </style>
-        <div style={{ width: "100%", padding: 16 }}>
+        <div style={{ width: "100%", padding: "4vw" }}>
           <Swiper
             modules={[Navigation, Pagination]}
             navigation={{ prevEl: ".prevEl", nextEl: ".nextEl" }}
@@ -72,10 +72,10 @@ export default function Section04() {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="prevEl w-8 absolute z-20 top-1/2 -translate-y-1/2 left-2 opacity-60 bg-black rounded-full p-1">
+            <div className="prevEl w-[7vw] absolute z-20 top-1/2 -translate-y-1/2 left-[2vw] opacity-60 bg-black rounded-full p-[1vw]">
               <Image src={leftarrow} alt="arrow" />
             </div>
-            <div className="nextEl w-8 absolute z-20 top-1/2 -translate-y-1/2 right-2 opacity-60 bg-black rounded-full p-1">
+            <div className="nextEl w-[7vw] absolute z-20 top-1/2 -translate-y-1/2 right-[2vw] opacity-60 bg-black rounded-full p-[1vw]">
               <Image src={rightarrow} alt="arrow" />
             </div>
             <div className="pagi z-20 !top-full -translate-y-full" />

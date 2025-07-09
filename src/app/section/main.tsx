@@ -13,7 +13,7 @@ export default function Main() {
     >
       <div className="font-[var(--basic-0)] overflow-hidden">
         <h2 className={`${styles.title} walter-turncoat-regular`}>
-          <span className={styles.line1}>YOU ARE INVITED TO</span>
+          <span className={styles.line1}>YOU'RE INVITED TO</span>
           <span className={styles.line2}>OUR WEDDING</span>
         </h2>
         <div className={styles.couple} style={{ position: "relative" }}>

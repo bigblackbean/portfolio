@@ -1,4 +1,3 @@
-import styles from "@/styles/section.module.css";
 import Image from "next/image";
 import calendar from "/public/images/section06/calendar.svg";
 

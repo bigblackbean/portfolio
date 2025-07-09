@@ -38,7 +38,7 @@ export default function Footer() {
           <Image src={kakao} alt="kakao" />
         </button> */}
         <button
-          style={{ width: "10vw", height: "10vw" }}
+          style={{ width: "13vw", height: "13vw" }}
           onClick={() =>
             shareContent({
               title: "강희&다솜 청첩장",
