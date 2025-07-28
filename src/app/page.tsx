@@ -70,7 +70,7 @@ function Wrap() {
       <div ref={mapRef}>
         <Section07 />
       </div>
-      <div ref={messageRef}>
+      <div ref={messageRef} className="scroll-mt-[-10vw]">
         <Section08 />
       </div>
       <Footer />

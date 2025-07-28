@@ -25,7 +25,7 @@ export default function Appbar({
   return (
     <div className="fixed bottom-0 left-0 w-full z-50">
       <ul
-        className={`flex w-full bg-[#00000060] ${
+        className={`flex w-full bg-[#000000] ${
           isScrollingDown ? "pb-[6vw]" : "pb-[0]"
         }`}
       >
