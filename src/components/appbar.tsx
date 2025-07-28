@@ -23,7 +23,7 @@ export default function Appbar({
   onNavigate: Record<NavKey, () => void>;
 }) {
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50">
+    <div className="fixed bottom-0 left-0 w-full z-[9999]">
       <ul
         className={`flex w-full bg-[#000000] ${
           isScrollingDown ? "pb-[6vw]" : "pb-[0]"

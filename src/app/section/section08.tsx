@@ -59,18 +59,18 @@ export default function Section08() {
       <div className="px-[4vw]">
         <ul>
           {family.map((item) => (
-            <li key={item.id} className="mb-[4vw]">
+            <li key={item.id} className="mb-[6vw]">
               <div
                 className="py-[2vw] border-b-2 border-[var(--basic-900)]"
                 style={{ fontSize: "var(--fz-18)", fontWeight: 600 }}
               >
                 {item.title}
               </div>
-              <ul>
+              <ul className="py-[2vw]">
                 {item.accounts.map((sub) => (
                   <li
                     key={sub.name}
-                    className="w-full py-[1vw]"
+                    className="w-full py-[2vw]"
                     style={{ fontSize: "var(--fz-16)" }}
                   >
                     <p
@@ -81,7 +81,7 @@ export default function Section08() {
                     </p>
                     <div className="flex justify-between">
                       <div className="flex">
-                        <p className="w-[16vw]" style={{ fontWeight: 600 }}>
+                        <p className="w-[14vw]" style={{ fontWeight: 600 }}>
                           {sub.name}
                         </p>
                         <p>
@@ -95,11 +95,11 @@ export default function Section08() {
                         </p>
                       </div>
                       <button
-                        className={`px-[2vw] py-[1vw] rounded-full ${
+                        className={`px-[3vw] py-[1vw] rounded-full ${
                           item.id === 1 ? "bg-[#7696C5]" : "bg-[#CD6485]"
                         }`}
                         style={{
-                          fontSize: "var(--fz-12)",
+                          fontSize: "var(--fz-14)",
                           fontWeight: 600,
                           color: "#fff",
                         }}
